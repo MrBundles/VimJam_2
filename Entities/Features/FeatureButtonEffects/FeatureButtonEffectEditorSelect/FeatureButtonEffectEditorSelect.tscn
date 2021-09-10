@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Entities/Features/FeatureButtonEffects/FeatureButtonEffect.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Entities/Features/FeatureButtonEffects/FeatureButtonEffectEditorSelect/FeatureButtonEffectEditorSelect.gd" type="Script" id=2]
+
+[node name="FeatureButtonEditorSelectEffect" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+button_background_color_normal = Color( 0.14902, 0.184314, 0.262745, 0.878431 )
+button_background_color_hover = Color( 1, 1, 1, 0.4 )
+button_background_color_pressed = Color( 0.890196, 0.137255, 0.137255, 0.878431 )
+button_label_color_normal = Color( 1, 1, 1, 0 )
+button_label_color_hover = Color( 1, 1, 1, 0 )
+button_label_color_pressed = Color( 1, 1, 1, 0 )

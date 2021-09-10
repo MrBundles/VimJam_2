@@ -1,0 +1,713 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   sodipodi:docname="Inkscape_Drawing.svg"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 210 297"
+   height="297mm"
+   width="210mm"
+   inkscape:export-filename="D:\Kevin\_Godot\Projects\Jam_Games\_Jam_Template\UI\MenuUI\Button\ButtonBorder.png"
+   inkscape:export-xdpi="48"
+   inkscape:export-ydpi="48">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     inkscape:snap-center="true"
+     inkscape:snap-object-midpoints="false"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-bbox="true"
+     inkscape:snap-global="true"
+     inkscape:window-maximized="1"
+     inkscape:window-y="-9"
+     inkscape:window-x="-9"
+     inkscape:window-height="1001"
+     inkscape:window-width="1920"
+     showgrid="true"
+     inkscape:document-rotation="0"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="mm"
+     inkscape:cy="-648.21229"
+     inkscape:cx="-1143.6751"
+     inkscape:zoom="0.58197556"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     showborder="false">
+    <inkscape:grid
+       empspacing="1"
+       spacingy="16.933333"
+       spacingx="16.933333"
+       id="grid833"
+       type="xygrid" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
+    <rect
+       inkscape:export-ydpi="48"
+       inkscape:export-xdpi="48"
+       inkscape:export-filename="D:\Kevin\_Godot\Projects\Jam_Games\_Jam_Template\transition_rect_1.png"
+       y="-338.66666"
+       x="-635"
+       height="1481.6666"
+       width="931.33331"
+       id="rect837"
+       style="fill:#ff00ff;stroke:none;stroke-width:18.3547;stroke-linecap:round;stroke-linejoin:bevel"
+       sodipodi:insensitive="true" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:bevel"
+       id="rect833"
+       width="8.4666729"
+       height="8.4666662"
+       x="-203.2"
+       y="-46.566666"
+       ry="0"
+       inkscape:export-filename="D:\Kevin\_Godot\Projects\Jam_Games\_Jam_Template\UI\MenuUI\Button\ButtonBorder.png"
+       inkscape:export-xdpi="48"
+       inkscape:export-ydpi="48" />
+    <rect
+       ry="2.3947692"
+       style="fill:#ffffff;stroke-width:0.648092;stroke-linecap:round;stroke-linejoin:bevel"
+       id="rect2752"
+       width="25.399998"
+       height="16.933331"
+       x="-120.26975"
+       y="-105.83334" />
+    <path
+       d="m -110.93488,-108.89203 -3.36512,3.0587 h 13.46049 l -3.36512,-3.0587 z"
+       style="fill:#ffffff;stroke-width:0.200515;stroke-linecap:round;stroke-linejoin:bevel"
+       id="rect2764" />
+    <circle
+       r="4.691792"
+       cy="-97.366669"
+       cx="-107.56976"
+       id="path2777"
+       style="fill:none;fill-opacity:1;stroke:#ff00ff;stroke-width:1.37;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <ellipse
+       ry="5.3391363e-13"
+       rx="5.2639376e-13"
+       cy="-55.033333"
+       cx="-110.06667"
+       id="path2779"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:0.964999;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <circle
+       r="0.81983572"
+       cy="-103.21754"
+       cx="-97.559799"
+       id="path2781"
+       style="fill:#ff00ff;fill-opacity:1;stroke:none;stroke-width:0.186884;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <g
+       transform="translate(-6.7004422,-59.402585)"
+       inkscape:export-ydpi="48"
+       inkscape:export-xdpi="48"
+       inkscape:export-filename="D:\Kevin\_Godot\Projects\Jam_Games\_Jam_Template\UI\Button\ButtonIcon\Icons\CameraIcon.png"
+       id="g2812">
+      <rect
+         style="fill:#ffff00;fill-opacity:0;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:bevel"
+         id="rect2750"
+         width="33.866692"
+         height="33.866661"
+         x="-160.86667"
+         y="-59.266666" />
+      <path
+         id="rect2783"
+         style="fill:#ffffff;stroke-width:0.648092;stroke-linecap:round;stroke-linejoin:bevel"
+         d="m -147.3284,-53.722809 -3.36517,3.058728 h -3.57497 c -1.3267,0 -2.39469,1.067983 -2.39469,2.394686 v 12.143962 c 0,1.326703 1.06799,2.394686 2.39469,2.394686 h 20.61062 c 1.3267,0 2.39469,-1.067983 2.39469,-2.394686 v -12.143962 c 0,-1.326703 -1.06799,-2.394686 -2.39469,-2.394686 h -3.57497 l -3.36517,-3.058728 z m 13.37541,4.854485 a 0.81983571,0.81983571 0 0 1 0.81959,0.820105 0.81983571,0.81983571 0 0 1 -0.81959,0.819586 0.81983571,0.81983571 0 0 1 -0.8201,-0.819586 0.81983571,0.81983571 0 0 1 0.8201,-0.820105 z m -10.01024,1.294495 c 2.86871,0 5.17952,2.281105 5.32422,5.114933 a 0.685,0.685 0 0 1 0.0527,0.261998 0.685,0.685 0 0 1 -0.0548,0.265618 c -0.14689,2.831801 -2.45491,5.111313 -5.32216,5.111316 -2.96141,-3e-6 -5.37693,-2.415527 -5.37693,-5.376934 0,-2.961405 2.41552,-5.376931 5.37693,-5.376931 z m 0,1.368909 c -2.221,0 -4.00596,1.78702 -4.00596,4.008022 0,2.221005 1.78496,4.005956 4.00596,4.005958 2.221,-2e-6 4.00751,-1.784953 4.00751,-4.005958 0,-2.221002 -1.78651,-4.008022 -4.00751,-4.008022 z" />
+    </g>
+    <g
+       transform="translate(-6.7004422,-59.402585)"
+       id="g2869">
+      <rect
+         style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:1.019;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect2822"
+         width="21.16667"
+         height="16.933336"
+         x="-114.3"
+         y="-12.7"
+         ry="0" />
+      <path
+         id="path2824"
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.99764;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="M -416.08594,-38.171875 A 6.1727633,6.1727633 0 0 0 -422.17188,-32 6.1727633,6.1727633 0 0 0 -416,-25.828125 6.1727633,6.1727633 0 0 0 -409.82812,-32 6.1727633,6.1727633 0 0 0 -416,-38.171875 a 6.1727633,6.1727633 0 0 0 -0.0859,0 z M -375.71289,-20 -392.47656,7.3398438 -408.28711,-12 -427.90625,12 h 32.57422 6.66406 32.57422 z"
+         transform="scale(0.26458333)" />
+      <path
+         id="rect2848"
+         style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:1.019;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m -110.06664,-16.933336 v 2.116666 h 19.04998 V -6.3666667e-7 h 2.116666 V -16.933336 Z" />
+      <path
+         id="rect2846"
+         style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:3.85134;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m -424,-56 v 8 h 72 V 8 h 8 v -64 z"
+         transform="scale(0.26458333)" />
+    </g>
+    <g
+       transform="translate(-6.7004422,-59.402585)"
+       inkscape:export-ydpi="48"
+       inkscape:export-xdpi="48"
+       inkscape:export-filename="D:\Kevin\_Godot\Projects\Jam_Games\_Jam_Template\UI\Button\ButtonIcon\Icons\GalleryIcon.png"
+       id="g2887">
+      <rect
+         y="-25.4"
+         x="-160.86667"
+         height="33.866661"
+         width="33.866692"
+         id="rect2814"
+         style="fill:#ffff00;fill-opacity:0;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:bevel" />
+      <g
+         id="g2879"
+         transform="translate(-42.333324,-2.1166693)">
+        <rect
+           style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:1.019;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="rect2871"
+           width="21.16667"
+           height="16.933336"
+           x="-114.3"
+           y="-12.7"
+           ry="0" />
+        <path
+           id="path2873"
+           style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.99764;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="M -416.08594,-38.171875 A 6.1727633,6.1727633 0 0 0 -422.17188,-32 6.1727633,6.1727633 0 0 0 -416,-25.828125 6.1727633,6.1727633 0 0 0 -409.82812,-32 6.1727633,6.1727633 0 0 0 -416,-38.171875 a 6.1727633,6.1727633 0 0 0 -0.0859,0 z M -375.71289,-20 -392.47656,7.3398438 -408.28711,-12 -427.90625,12 h 32.57422 6.66406 32.57422 z"
+           transform="scale(0.26458333)" />
+        <path
+           id="path2875"
+           style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:1.019;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m -110.06664,-16.933336 v 2.116666 h 19.04998 V -6.3666667e-7 h 2.116666 V -16.933336 Z" />
+        <path
+           id="path2877"
+           style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:3.85134;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m -424,-56 v 8 h 72 V 8 h 8 v -64 z"
+           transform="scale(0.26458333)" />
+      </g>
+    </g>
+    <rect
+       inkscape:export-ydpi="48"
+       inkscape:export-xdpi="48"
+       inkscape:export-filename="D:\Kevin\_Godot\Projects\Jam_Games\_Jam_Template\Scenes\GameScenes\GameSceneBase\GameSceneBaseTileMap\GameSceneBaseTileSet.png"
+       ry="0"
+       y="16.933332"
+       x="-198.96667"
+       height="33.866673"
+       width="33.866669"
+       id="rect853"
+       style="fill:#1a535c;fill-opacity:1;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:bevel" />
+    <rect
+       style="fill:#4ecdc4;fill-opacity:1;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:bevel"
+       id="rect855"
+       width="33.866669"
+       height="33.866673"
+       x="-165.10001"
+       y="16.933332"
+       ry="0"
+       inkscape:export-filename="D:\Kevin\_Godot\Projects\Jam_Games\_Jam_Template\Scenes\GameScenes\GameSceneBase\GameSceneBaseTileMap\GameSceneBaseTileSet.png"
+       inkscape:export-xdpi="48"
+       inkscape:export-ydpi="48" />
+    <rect
+       inkscape:export-ydpi="48"
+       inkscape:export-xdpi="48"
+       inkscape:export-filename="D:\Kevin\_Godot\Projects\Jam_Games\_Jam_Template\Scenes\GameScenes\GameSceneBase\GameSceneBaseTileMap\GameSceneBaseTileSet.png"
+       ry="0"
+       y="16.933332"
+       x="-131.23334"
+       height="33.866673"
+       width="33.866669"
+       id="rect857"
+       style="fill:#f7fff7;fill-opacity:1;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:bevel" />
+    <rect
+       style="fill:#ff6b6b;fill-opacity:1;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:bevel"
+       id="rect859"
+       width="33.866669"
+       height="33.866673"
+       x="-97.366669"
+       y="16.933332"
+       ry="0"
+       inkscape:export-filename="D:\Kevin\_Godot\Projects\Jam_Games\_Jam_Template\Scenes\GameScenes\GameSceneBase\GameSceneBaseTileMap\GameSceneBaseTileSet.png"
+       inkscape:export-xdpi="48"
+       inkscape:export-ydpi="48" />
+    <rect
+       inkscape:export-ydpi="48"
+       inkscape:export-xdpi="48"
+       inkscape:export-filename="D:\Kevin\_Godot\Projects\Jam_Games\_Jam_Template\Scenes\GameScenes\GameSceneBase\GameSceneBaseTileMap\GameSceneBaseTileSet.png"
+       ry="0"
+       y="16.933329"
+       x="-63.5"
+       height="33.866673"
+       width="33.866669"
+       id="rect861"
+       style="fill:#ffe66d;fill-opacity:1;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:bevel" />
+    <path
+       id="rect873"
+       style="fill:#1a535c;fill-opacity:1;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:bevel"
+       d="M -29.633333,16.933333 V 50.8 H 4.2333331 Z"
+       inkscape:export-filename="D:\Kevin\_Godot\Projects\Jam_Games\_Jam_Template\Scenes\GameScenes\GameSceneBase\GameSceneBaseTileMap\GameSceneBaseTileSet.png"
+       inkscape:export-xdpi="48"
+       inkscape:export-ydpi="48" />
+    <path
+       d="M 4.2333333,16.933335 V 50.8 H 38.099999 Z"
+       style="fill:#4ecdc4;fill-opacity:1;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:bevel"
+       id="path887"
+       inkscape:export-filename="D:\Kevin\_Godot\Projects\Jam_Games\_Jam_Template\Scenes\GameScenes\GameSceneBase\GameSceneBaseTileMap\GameSceneBaseTileSet.png"
+       inkscape:export-xdpi="48"
+       inkscape:export-ydpi="48" />
+    <path
+       id="path889"
+       style="fill:#f7fff7;fill-opacity:1;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:bevel"
+       d="M 38.1,16.933335 V 50.8 h 33.866665 z"
+       inkscape:export-filename="D:\Kevin\_Godot\Projects\Jam_Games\_Jam_Template\Scenes\GameScenes\GameSceneBase\GameSceneBaseTileMap\GameSceneBaseTileSet.png"
+       inkscape:export-xdpi="48"
+       inkscape:export-ydpi="48" />
+    <path
+       d="M 71.966666,16.933335 V 50.8 h 33.866664 z"
+       style="fill:#ff6b6b;fill-opacity:1;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:bevel"
+       id="path891"
+       inkscape:export-filename="D:\Kevin\_Godot\Projects\Jam_Games\_Jam_Template\Scenes\GameScenes\GameSceneBase\GameSceneBaseTileMap\GameSceneBaseTileSet.png"
+       inkscape:export-xdpi="48"
+       inkscape:export-ydpi="48" />
+    <path
+       id="path893"
+       style="fill:#ffe66d;fill-opacity:1;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:bevel"
+       d="M 105.83333,16.933335 V 50.8 H 139.7 Z"
+       inkscape:export-filename="D:\Kevin\_Godot\Projects\Jam_Games\_Jam_Template\Scenes\GameScenes\GameSceneBase\GameSceneBaseTileMap\GameSceneBaseTileSet.png"
+       inkscape:export-xdpi="48"
+       inkscape:export-ydpi="48" />
+    <rect
+       style="fill:#1a535c;fill-opacity:1;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:bevel"
+       id="rect895"
+       width="33.866669"
+       height="33.866673"
+       x="-198.96666"
+       y="59.266666"
+       ry="0"
+       inkscape:export-filename="D:\Kevin\_Godot\Projects\Jam_Games\_Jam_Template\Scenes\GameScenes\GameSceneBase\GameSceneBaseTileMap\OneWayGameSceneBaseTileSet.png"
+       inkscape:export-xdpi="48"
+       inkscape:export-ydpi="48" />
+    <rect
+       inkscape:export-ydpi="48"
+       inkscape:export-xdpi="48"
+       inkscape:export-filename="D:\Kevin\_Godot\Projects\Jam_Games\_Jam_Template\Scenes\GameScenes\GameSceneBase\GameSceneBaseTileMap\OneWayGameSceneBaseTileSet.png"
+       ry="0"
+       y="59.266666"
+       x="-165.09999"
+       height="33.866673"
+       width="33.866669"
+       id="rect897"
+       style="fill:#4ecdc4;fill-opacity:1;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:bevel" />
+    <rect
+       style="fill:#f7fff7;fill-opacity:1;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:bevel"
+       id="rect899"
+       width="33.866669"
+       height="33.866673"
+       x="-131.23332"
+       y="59.266666"
+       ry="0"
+       inkscape:export-filename="D:\Kevin\_Godot\Projects\Jam_Games\_Jam_Template\Scenes\GameScenes\GameSceneBase\GameSceneBaseTileMap\OneWayGameSceneBaseTileSet.png"
+       inkscape:export-xdpi="48"
+       inkscape:export-ydpi="48" />
+    <rect
+       inkscape:export-ydpi="48"
+       inkscape:export-xdpi="48"
+       inkscape:export-filename="D:\Kevin\_Godot\Projects\Jam_Games\_Jam_Template\Scenes\GameScenes\GameSceneBase\GameSceneBaseTileMap\OneWayGameSceneBaseTileSet.png"
+       ry="0"
+       y="59.266666"
+       x="-97.366661"
+       height="33.866673"
+       width="33.866669"
+       id="rect901"
+       style="fill:#ff6b6b;fill-opacity:1;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:bevel" />
+    <rect
+       style="fill:#ffe66d;fill-opacity:1;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:bevel"
+       id="rect903"
+       width="33.866669"
+       height="33.866673"
+       x="-63.499989"
+       y="59.266663"
+       ry="0"
+       inkscape:export-filename="D:\Kevin\_Godot\Projects\Jam_Games\_Jam_Template\Scenes\GameScenes\GameSceneBase\GameSceneBaseTileMap\OneWayGameSceneBaseTileSet.png"
+       inkscape:export-xdpi="48"
+       inkscape:export-ydpi="48" />
+    <path
+       inkscape:export-ydpi="48"
+       inkscape:export-xdpi="48"
+       inkscape:export-filename="D:\Kevin\_Godot\Projects\Jam_Games\_Jam_Template\Scenes\GameScenes\GameSceneBase\GameSceneBaseTileMap\OneWayGameSceneBaseTileSet.png"
+       d="M -29.633323,59.266667 V 93.133334 H 4.2333428 Z"
+       style="fill:#1a535c;fill-opacity:1;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:bevel"
+       id="path905" />
+    <path
+       inkscape:export-ydpi="48"
+       inkscape:export-xdpi="48"
+       inkscape:export-filename="D:\Kevin\_Godot\Projects\Jam_Games\_Jam_Template\Scenes\GameScenes\GameSceneBase\GameSceneBaseTileMap\OneWayGameSceneBaseTileSet.png"
+       id="path907"
+       style="fill:#4ecdc4;fill-opacity:1;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:bevel"
+       d="M 4.233343,59.266669 V 93.133334 H 38.100009 Z" />
+    <path
+       inkscape:export-ydpi="48"
+       inkscape:export-xdpi="48"
+       inkscape:export-filename="D:\Kevin\_Godot\Projects\Jam_Games\_Jam_Template\Scenes\GameScenes\GameSceneBase\GameSceneBaseTileMap\OneWayGameSceneBaseTileSet.png"
+       d="M 38.10001,59.266669 V 93.133334 H 71.966675 Z"
+       style="fill:#f7fff7;fill-opacity:1;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:bevel"
+       id="path909" />
+    <path
+       inkscape:export-ydpi="48"
+       inkscape:export-xdpi="48"
+       inkscape:export-filename="D:\Kevin\_Godot\Projects\Jam_Games\_Jam_Template\Scenes\GameScenes\GameSceneBase\GameSceneBaseTileMap\OneWayGameSceneBaseTileSet.png"
+       id="path911"
+       style="fill:#ff6b6b;fill-opacity:1;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:bevel"
+       d="M 71.966676,59.266669 V 93.133334 H 105.83334 Z" />
+    <path
+       inkscape:export-ydpi="48"
+       inkscape:export-xdpi="48"
+       inkscape:export-filename="D:\Kevin\_Godot\Projects\Jam_Games\_Jam_Template\Scenes\GameScenes\GameSceneBase\GameSceneBaseTileMap\OneWayGameSceneBaseTileSet.png"
+       d="m 105.83334,59.266669 v 33.866665 h 33.86667 z"
+       style="fill:#ffe66d;fill-opacity:1;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:bevel"
+       id="path913" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:22.5778px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="-297.15836"
+       y="43.493282"
+       id="text917"><tspan
+         sodipodi:role="line"
+         x="-297.15836"
+         y="43.493282"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:22.5778px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+         id="tspan919">Normal</tspan></text>
+    <text
+       id="text925"
+       y="82.418297"
+       x="-310.55191"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:22.5778px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:22.5778px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+         y="82.418297"
+         x="-310.55191"
+         sodipodi:role="line"
+         id="tspan927">OneWay</tspan></text>
+    <g
+       inkscape:export-ydpi="48"
+       inkscape:export-xdpi="48"
+       inkscape:export-filename="D:\Kevin\_Godot\Projects\Jam_Games\_Jam_Template\UI\Buttons\ButtonIcon\Icons\CharacterIcon.png"
+       id="g1103">
+      <rect
+         y="-156.76926"
+         x="-165.21355"
+         height="33.866661"
+         width="33.866692"
+         id="rect877"
+         style="fill:#ffff00;fill-opacity:0;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:bevel" />
+      <g
+         id="g910"
+         transform="matrix(1.5040686,0,0,1.5040686,79.236797,70.747524)"
+         style="fill:#ffffff">
+        <ellipse
+           ry="6.3500023"
+           rx="6.3500013"
+           cy="-144.24254"
+           cx="-151.2677"
+           id="path892"
+           style="fill:#ffffff;fill-opacity:1;stroke-width:0.5095;stroke-linecap:round;stroke-linejoin:bevel" />
+        <path
+           d="m -155.65038,-138.9147 a 10.583336,10.424878 0 0 0 -6.20065,9.48883 h 21.16666 a 10.583336,10.424878 0 0 0 -6.20065,-9.48883 6.8991688,6.8991704 0 0 1 -4.38268,1.57148 6.8991688,6.8991704 0 0 1 -4.38268,-1.57148 z"
+           style="fill:#ffffff;fill-opacity:1;stroke-width:0.842785;stroke-linecap:round;stroke-linejoin:bevel"
+           id="ellipse894" />
+      </g>
+    </g>
+    <g
+       inkscape:export-ydpi="48"
+       inkscape:export-xdpi="48"
+       inkscape:export-filename="D:\Kevin\_Godot\Projects\Jam_Games\_Jam_Template\UI\Buttons\ButtonIcon\Icons\FlowerIcon.png"
+       id="g1071">
+      <g
+         inkscape:export-ydpi="48"
+         inkscape:export-xdpi="48"
+         inkscape:export-filename="D:\Kevin\_Godot\Projects\Jam_Games\_Jam_Template\UI\Buttons\ButtonIcon\Icons\FlowerIcon.png"
+         id="g1093">
+        <rect
+           y="-195.71588"
+           x="-165.51314"
+           height="33.866661"
+           width="33.866692"
+           id="rect912"
+           style="fill:#ffff00;fill-opacity:0;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:bevel" />
+        <g
+           transform="matrix(1.2396421,0,0,1.2396421,-111.82842,18.336266)"
+           id="g970">
+          <path
+             id="path924"
+             style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.754106;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:0.754106, 0.754106;stroke-dashoffset:0;stroke-opacity:1"
+             d="m -29.679166,-171.03958 a 3.6862394,3.6862403 0 0 0 -3.472347,2.5448 3.6862394,3.6862403 0 0 0 -0.795865,-0.0873 3.6862394,3.6862403 0 0 0 -3.686242,3.68624 3.6862394,3.6862403 0 0 0 1.084154,2.61109 3.6862394,3.6862403 0 0 0 -1.084154,2.61108 3.6862394,3.6862403 0 0 0 3.686242,3.68625 3.6862394,3.6862403 0 0 0 0.795865,-0.087 3.6862394,3.6862403 0 0 0 3.504748,2.54449 3.6862394,3.6862403 0 0 0 3.504747,-2.5448 3.6862394,3.6862403 0 0 0 0.795865,0.0873 3.6862394,3.6862403 0 0 0 3.686241,-3.68625 3.6862394,3.6862403 0 0 0 -1.084153,-2.61109 3.6862394,3.6862403 0 0 0 1.084153,-2.61109 3.6862394,3.6862403 0 0 0 -3.686241,-3.68624 3.6862394,3.6862403 0 0 0 -0.795865,0.087 3.6862394,3.6862403 0 0 0 -3.504747,-2.54451 3.6862394,3.6862403 0 0 0 -0.0324,0 z m 0,5.06858 a 3.6862394,3.6862403 0 0 1 0.0324,0 3.6862394,3.6862403 0 0 1 3.686241,3.68626 3.6862394,3.6862403 0 0 1 -3.686241,3.68623 3.6862394,3.6862403 0 0 1 -3.68624,-3.68623 3.6862394,3.6862403 0 0 1 3.65384,-3.68626 z" />
+          <g
+             id="g964">
+            <path
+               inkscape:transform-center-y="-3.734331"
+               inkscape:transform-center-x="-6.5235353"
+               d="m -24.808253,-154.14331 a 6.5715154,8.7620196 60 0 0 -4.886279,6.61517 6.5715154,8.7620196 60 0 0 8.214183,-0.94839 6.5715154,8.7620196 60 0 0 4.928421,-6.6395 6.5715154,8.7620196 60 0 0 -8.214179,0.94839 6.5715154,8.7620196 60 0 0 -0.04214,0.0243 z"
+               style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3.00001;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:3.00001, 3.00001;stroke-dashoffset:0;stroke-opacity:1"
+               id="ellipse928" />
+            <path
+               id="path938"
+               style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3.00001;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:3.00001, 3.00001;stroke-dashoffset:0;stroke-opacity:1"
+               d="m -34.485278,-154.14331 a 8.7620196,6.5715154 30 0 1 4.886279,6.61517 8.7620196,6.5715154 30 0 1 -8.214183,-0.94839 8.7620196,6.5715154 30 0 1 -4.928421,-6.6395 8.7620196,6.5715154 30 0 1 8.214179,0.94839 8.7620196,6.5715154 30 0 1 0.04214,0.0243 z"
+               inkscape:transform-center-x="6.5235357"
+               inkscape:transform-center-y="-3.734331" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g
+       inkscape:export-ydpi="48"
+       inkscape:export-xdpi="48"
+       inkscape:export-filename="D:\Kevin\_Godot\Projects\Jam_Games\_Jam_Template\UI\Buttons\ButtonIcon\Icons\ObjectIcon.png"
+       id="g1057">
+      <rect
+         y="-237.45227"
+         x="-164.2579"
+         height="33.866661"
+         width="33.866692"
+         id="rect1007"
+         style="fill:#008000;fill-opacity:0;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:bevel" />
+      <g
+         id="g1030"
+         transform="matrix(1.0659235,0,0,1.0659235,-133.5617,-123.15974)">
+        <path
+           d="m -4.9630686,-102.7161 a 7.7537986,7.7538023 0 0 0 -7.7143604,7.7538 7.7537986,7.7538023 0 0 0 0.0013,0.128094 l 7.7389702,1.147483 -0.9512412,6.417645 a 7.7537986,7.7538023 0 0 0 0.9648079,0.06058 7.7537986,7.7538023 0 0 0 7.7537987,-7.753798 7.7537986,7.7538023 0 0 0 -7.7537987,-7.753804 7.7537986,7.7538023 0 0 0 -0.039438,0 z"
+           style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.58622;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:1.58622, 1.58622;stroke-dashoffset:0;stroke-opacity:1"
+           id="ellipse926" />
+        <rect
+           transform="rotate(8.4329872)"
+           y="-91.443855"
+           x="-34.636734"
+           height="15.5076"
+           width="15.507597"
+           id="rect990"
+           style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3.95672;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:3.95672, 3.95672;stroke-dashoffset:0;stroke-opacity:1" />
+        <path
+           d="m -22.122639,-104.75519 -6.53091,18.850662 6.034624,-1.16105 1.340887,-9.04389 7.620657,1.129815 z"
+           inkscape:transform-center-y="-1.885282"
+           inkscape:transform-center-x="-1.0881312"
+           style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3.8091;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:3.8091, 3.8091;stroke-dashoffset:0;stroke-opacity:1"
+           id="path992" />
+      </g>
+    </g>
+    <g
+       inkscape:export-ydpi="48"
+       inkscape:export-xdpi="48"
+       inkscape:export-filename="D:\Kevin\_Godot\Projects\Jam_Games\_Jam_Template\UI\Buttons\ButtonIcon\Icons\CloseIcon.png"
+       id="g1148">
+      <rect
+         style="fill:#ffff00;fill-opacity:0;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:bevel"
+         id="rect1105"
+         width="33.866692"
+         height="33.866661"
+         x="-213.96248"
+         y="-237.45227" />
+      <g
+         id="g1130"
+         style="fill:#ffffff"
+         transform="matrix(0.51265474,0,0,0.51265474,-62.869295,-105.4963)">
+        <rect
+           transform="rotate(45)"
+           inkscape:transform-center-x="-13.470393"
+           inkscape:transform-center-y="-13.47038"
+           ry="4.2333312"
+           y="-6.4123197"
+           x="-357.45673"
+           height="46.566681"
+           width="8.4666624"
+           id="rect1122"
+           style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3.71588;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:3.71588, 3.71588;stroke-dashoffset:0;stroke-opacity:1" />
+        <rect
+           style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3.71588;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:3.71588, 3.71588;stroke-dashoffset:0;stroke-opacity:1"
+           id="rect1126"
+           width="8.4666624"
+           height="46.566681"
+           x="-40.154354"
+           y="310.89008"
+           ry="4.2333312"
+           inkscape:transform-center-y="13.470372"
+           inkscape:transform-center-x="-13.470375"
+           transform="matrix(0.70710678,-0.70710678,-0.70710678,-0.70710678,0,0)" />
+      </g>
+    </g>
+    <g
+       inkscape:export-ydpi="48"
+       inkscape:export-xdpi="48"
+       inkscape:export-filename="D:\Kevin\_Godot\Projects\Jam_Games\_Jam_Template\UI\Buttons\ButtonIcon\Icons\TextIcon.png"
+       id="g1263">
+      <rect
+         y="-187.39998"
+         x="-213.17796"
+         height="33.866661"
+         width="33.866692"
+         id="rect1132"
+         style="fill:#ffff00;fill-opacity:0;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:bevel" />
+      <path
+         id="rect1194"
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3.78286;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:3.78286, 3.78286;stroke-dashoffset:0;stroke-opacity:1"
+         d="m -209.55864,-182.50709 c -1.2674,0 -2.28773,1.02033 -2.28773,2.28773 v 13.40045 c 0,1.2674 1.02033,2.28773 2.28773,2.28773 h 17.84549 l 4.03227,6.10498 0.11171,-6.10498 h 4.63857 c 1.2674,0 2.28773,-1.02033 2.28773,-2.28773 v -13.40045 c 0,-1.2674 -1.02033,-2.28773 -2.28773,-2.28773 z m 0.88945,4.18114 h 24.84885 c 0.43149,0 0.77887,0.34737 0.77887,0.77886 0,0.43149 -0.34738,0.77886 -0.77887,0.77886 h -24.84885 c -0.43149,0 -0.77886,-0.34737 -0.77886,-0.77886 0,-0.43149 0.34737,-0.77886 0.77886,-0.77886 z m 0,4.07026 h 24.84885 c 0.43149,0 0.77887,0.34737 0.77887,0.77887 0,0.43149 -0.34738,0.77886 -0.77887,0.77886 h -24.84885 c -0.43149,0 -0.77886,-0.34737 -0.77886,-0.77886 0,-0.4315 0.34737,-0.77887 0.77886,-0.77887 z m 0,3.98565 h 24.84885 c 0.43149,0 0.77887,0.34738 0.77887,0.77886 0,0.43149 -0.34738,0.77887 -0.77887,0.77887 h -24.84885 c -0.43149,0 -0.77886,-0.34738 -0.77886,-0.77887 0,-0.43148 0.34737,-0.77886 0.77886,-0.77886 z" />
+    </g>
+    <g
+       inkscape:export-ydpi="48"
+       inkscape:export-xdpi="48"
+       inkscape:export-filename="D:\Kevin\_Godot\Projects\Jam_Games\_Jam_Template\UI\Buttons\ButtonIcon\Icons\DominoIcon.png"
+       id="g1291">
+      <rect
+         style="fill:#ffff00;fill-opacity:0;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:bevel"
+         id="rect1247"
+         width="33.866692"
+         height="33.866661"
+         x="-212.24474"
+         y="-147.68608" />
+      <g
+         id="g1281"
+         transform="matrix(0.44098696,0,0,0.44098696,-71.4452,-69.962068)">
+        <rect
+           transform="rotate(21.005826)"
+           inkscape:transform-center-y="-31.157509"
+           inkscape:transform-center-x="-7.429179"
+           style="fill:#ffffff;fill-opacity:1;stroke-width:0.72459;stroke-linecap:round;stroke-linejoin:bevel"
+           id="rect1269"
+           width="8.4666796"
+           height="63.499996"
+           x="-315.1402"
+           y="-59.110546" />
+        <rect
+           transform="rotate(9.2199619)"
+           y="-125.23399"
+           x="-288.67822"
+           height="63.499996"
+           width="8.4666796"
+           id="rect1271"
+           style="fill:#ffffff;fill-opacity:1;stroke-width:0.72459;stroke-linecap:round;stroke-linejoin:bevel"
+           inkscape:transform-center-x="-0.90849227"
+           inkscape:transform-center-y="-32.018105" />
+        <rect
+           inkscape:transform-center-y="-31.749998"
+           inkscape:transform-center-x="4.2333393"
+           style="fill:#ffffff;fill-opacity:1;stroke-width:0.72459;stroke-linecap:round;stroke-linejoin:bevel"
+           id="rect1273"
+           width="8.4666796"
+           height="63.499996"
+           x="-254.00002"
+           y="-169.33333" />
+        <rect
+           transform="rotate(31.727883)"
+           y="8.9990883"
+           x="-326.97284"
+           height="63.499996"
+           width="8.4666796"
+           id="rect1275"
+           style="fill:#ffffff;fill-opacity:1;stroke-width:0.72459;stroke-linecap:round;stroke-linejoin:bevel"
+           inkscape:transform-center-x="-13.096174"
+           inkscape:transform-center-y="-29.231384" />
+      </g>
+    </g>
+    <rect
+       style="fill:#ffff00;fill-opacity:1;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:bevel"
+       id="rect1283"
+       width="33.866692"
+       height="33.866661"
+       x="-212.27316"
+       y="-105.32092" />
+    <g
+       id="g1108"
+       inkscape:export-filename="D:\Kevin\_Godot\Projects\Jam_Games\_Jam_Template\Resources\Inkscape\Icons\EyeOpenIcon.png"
+       inkscape:export-xdpi="48"
+       inkscape:export-ydpi="48">
+      <rect
+         inkscape:export-ydpi="48"
+         inkscape:export-xdpi="48"
+         inkscape:export-filename="D:\Kevin\_Godot\Projects\Jam_Games\_Jam_Template\Resources\Inkscape\Icons\EyeOpenIcon.png"
+         style="fill:#ffff00;fill-opacity:0;stroke-width:0.529166;stroke-linecap:round;stroke-linejoin:bevel"
+         id="rect1008"
+         width="16.933338"
+         height="16.933334"
+         x="-211.66667"
+         y="-287.86667" />
+      <g
+         transform="matrix(0.48836003,0,0,0.48836003,6.0748556,-123.87578)"
+         id="g1095">
+        <path
+           id="path1063"
+           style="fill:#ffffff;stroke-width:4.63434;stroke-linecap:round;stroke-linejoin:bevel"
+           d="m -1619.9785,-1235.6367 a 69.500727,48 0 0 0 -65.1719,32 69.500727,48 0 0 0 65.5254,32 69.500727,48 0 0 0 65.5254,-32 69.500727,48 0 0 0 -65.5254,-32 69.500727,48 0 0 0 -0.3535,0 z m 0.2637,0.8887 a 31.110434,31.110434 0 0 1 0.09,0 31.110434,31.110434 0 0 1 31.1113,31.1113 31.110434,31.110434 0 0 1 -31.1113,31.1094 31.110434,31.110434 0 0 1 -31.1113,-31.1094 31.110434,31.110434 0 0 1 31.0215,-31.1113 z"
+           transform="scale(0.26458333)" />
+        <circle
+           r="3.4234364"
+           cy="-318.46234"
+           cx="-428.52579"
+           id="circle1067"
+           style="fill:#ffffff;fill-opacity:1;stroke-width:0.412025;stroke-linecap:round;stroke-linejoin:bevel" />
+      </g>
+    </g>
+    <g
+       id="g1115"
+       inkscape:export-filename="D:\Kevin\_Godot\Projects\Jam_Games\_Jam_Template\Resources\Inkscape\Icons\EyeCloseIcon.png"
+       inkscape:export-xdpi="48"
+       inkscape:export-ydpi="48">
+      <rect
+         y="-262.46667"
+         x="-211.66667"
+         height="16.933334"
+         width="16.933338"
+         id="rect1097"
+         style="fill:#ffff00;fill-opacity:0;stroke-width:0.529166;stroke-linecap:round;stroke-linejoin:bevel"
+         inkscape:export-filename="D:\Kevin\_Godot\Projects\Jam_Games\_Jam_Template\Resources\Inkscape\Icons\EyeOpenIcon.png"
+         inkscape:export-xdpi="48"
+         inkscape:export-ydpi="48" />
+      <g
+         transform="matrix(0.48836773,0,0,0.48836773,-7.0250671,-109.00944)"
+         id="g1102">
+        <path
+           id="path1045"
+           style="fill:#ffffff;stroke-width:4.63434;stroke-linecap:round;stroke-linejoin:bevel"
+           d="m -1518.5723,-1154.0957 a 69.500726,47.999999 0 0 0 -65.1699,32 69.500726,47.999999 0 0 0 42.4727,29.2832 l 3.1172,-5.4004 a 31.110434,31.110434 0 0 1 -11.1758,-23.8848 31.110434,31.110434 0 0 1 31.0195,-31.1093 31.110434,31.110434 0 0 1 0.09,0 31.110434,31.110434 0 0 1 10.7188,1.9043 l 1.2012,-2.0801 a 69.500726,47.999999 0 0 0 -11.92,-0.7129 69.500726,47.999999 0 0 0 -0.3535,0 z m 23.4024,2.7187 -3.1153,5.3946 a 31.110434,31.110434 0 0 1 11.1778,23.8847 31.110434,31.110434 0 0 1 -31.1114,31.1114 31.110434,31.110434 0 0 1 -10.7167,-1.9063 l -1.2032,2.084 a 69.500726,47.999999 0 0 0 11.9199,0.7129 69.500726,47.999999 0 0 0 65.5254,-32 69.500726,47.999999 0 0 0 -42.4765,-29.2813 z"
+           transform="scale(0.26458333)" />
+        <path
+           id="circle1049"
+           style="fill:#ffffff;fill-opacity:1;stroke-width:1.55726;stroke-linecap:round;stroke-linejoin:bevel"
+           d="m -1518.2773,-1135.0352 a 12.938972,12.938972 0 0 0 -12.8809,12.9375 12.938972,12.938972 0 0 0 2.4355,7.5528 l 11.793,-20.4258 a 12.938972,12.938972 0 0 0 -1.2891,-0.064 12.938972,12.938972 0 0 0 -0.058,0 z m 10.5625,5.3848 -11.793,20.4277 a 12.938972,12.938972 0 0 0 1.289,0.064 12.938972,12.938972 0 0 0 12.9395,-12.9395 12.938972,12.938972 0 0 0 -2.4355,-7.5527 z"
+           transform="scale(0.26458333)" />
+        <rect
+           ry="0.90354043"
+           y="-70.18856"
+           x="-497.36844"
+           height="27.84712"
+           width="2.0921752"
+           id="rect1039"
+           style="fill:#ffffff;fill-opacity:1;stroke-width:0.511832;stroke-linecap:round;stroke-linejoin:bevel"
+           transform="rotate(30)" />
+      </g>
+    </g>
+    <rect
+       y="-101.6"
+       x="-254.00002"
+       height="33.866661"
+       width="33.866692"
+       id="rect1283-3"
+       style="fill:#ffff00;fill-opacity:1;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:bevel" />
+  </g>
+</svg>

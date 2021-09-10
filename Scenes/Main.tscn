@@ -1,0 +1,60 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Scenes/Main.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/MenuScenes/MenuSceneMain/MenuSceneMain.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/GameScenes/GameScene00.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/MenuScenes/MenuSceneLevels/MenuSceneLevels.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/MenuScenes/MenuSceneCredits/MenuSceneCredits.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/MenuScenes/MenuScenePause/MenuScenePause.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/MenuScenes/MenuSceneBugs/MenuSceneBugs.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/MenuScenes/MenuSceneSettings/MenuSceneSettings.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/GameScenes/GameScene01.tscn" type="PackedScene" id=10]
+
+[node name="Main" type="Node"]
+pause_mode = 2
+script = ExtResource( 1 )
+game_scenes = [ ExtResource( 3 ), ExtResource( 10 ) ]
+
+[node name="BackgroundLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="ColorRect" type="ColorRect" parent="BackgroundLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color( 0.294118, 0.294118, 0.294118, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GameSceneLayer" type="Node2D" parent="."]
+
+[node name="GameScene" parent="GameSceneLayer" instance=ExtResource( 3 )]
+
+[node name="MenuSceneLayer" type="CanvasLayer" parent="."]
+
+[node name="MenuSceneMain" parent="MenuSceneLayer" instance=ExtResource( 2 )]
+default_position_id = 5
+empty_menu_scene_position_id = 3
+main_menu_scene_position_id = 0
+bugs_menu_scene_position_id = 3
+pause_menu_scene_position_id = 3
+screenshots_menu_scene_position_id = 3
+editor_menu_scene_position_id = 3
+
+[node name="MenuSceneLevels" parent="MenuSceneLayer" instance=ExtResource( 5 )]
+visible = false
+
+[node name="MenuSceneSettings" parent="MenuSceneLayer" instance=ExtResource( 9 )]
+visible = false
+
+[node name="MenuSceneBugs" parent="MenuSceneLayer" instance=ExtResource( 8 )]
+visible = false
+
+[node name="MenuScenePause" parent="MenuSceneLayer" instance=ExtResource( 7 )]
+visible = false
+margin_left = -959.99
+margin_right = 959.99
+
+[node name="MenuSceneCredits" parent="MenuSceneLayer" instance=ExtResource( 6 )]
+visible = false

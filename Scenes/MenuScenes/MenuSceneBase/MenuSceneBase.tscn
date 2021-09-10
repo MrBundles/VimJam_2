@@ -1,0 +1,172 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Entities/Features/FeatureThemeSetter/FeatureThemeSetter.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Resources/Themes/default_theme.tres" type="Theme" id=2]
+[ext_resource path="res://Resources/Fonts/blinker/fonts_ttf/Blinker-SemiBold.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Entities/Features/FeatureFontSizeOverrider/FeatureFontSizeOverrider.tscn" type="PackedScene" id=4]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Control
+
+# references ------------------------------------------------------------------
+
+
+# signals ---------------------------------------------------------------------
+
+
+# variables -------------------------------------------------------------------
+export(GVM.MENU_SCENE_POSITIONS) var default_position_id = GVM.MENU_SCENE_POSITIONS.center setget set_default_position_id
+export(GVM.MENU_SCENE_POSITIONS) var empty_menu_scene_position_id = GVM.MENU_SCENE_POSITIONS.default
+export(GVM.MENU_SCENE_POSITIONS) var main_menu_scene_position_id = GVM.MENU_SCENE_POSITIONS.default
+export(GVM.MENU_SCENE_POSITIONS) var levels_menu_scene_position_id = GVM.MENU_SCENE_POSITIONS.default
+export(GVM.MENU_SCENE_POSITIONS) var settings_menu_scene_position_id = GVM.MENU_SCENE_POSITIONS.default
+export(GVM.MENU_SCENE_POSITIONS) var bugs_menu_scene_position_id = GVM.MENU_SCENE_POSITIONS.default
+export(GVM.MENU_SCENE_POSITIONS) var pause_menu_scene_position_id = GVM.MENU_SCENE_POSITIONS.default
+export(GVM.MENU_SCENE_POSITIONS) var credits_menu_scene_position_id = GVM.MENU_SCENE_POSITIONS.default
+export(GVM.MENU_SCENE_POSITIONS) var screenshots_menu_scene_position_id = GVM.MENU_SCENE_POSITIONS.default
+export(GVM.MENU_SCENE_POSITIONS) var editor_menu_scene_position_id = GVM.MENU_SCENE_POSITIONS.default
+
+var screen_size
+var menu_scene_position_array
+
+# main functions --------------------------------------------------------------
+func _ready():
+	# connect signals
+	GSM.connect(\"change_scene\", self, \"_on_change_scene\")
+	
+	# initialize variables
+	screen_size = get_viewport_rect().size
+	
+	menu_scene_position_array = [
+		Vector2(0, 0),										# default
+		Vector2(screen_size.x / 2, -2 * screen_size.y),		# up
+		Vector2(screen_size.x / 2, 2 * screen_size.y),		# down
+		Vector2(-2 * screen_size.x, screen_size.y / 2),		# left
+		Vector2(2 * screen_size.x, screen_size.y / 2),		# right
+		Vector2(screen_size.x / 2, screen_size.y / 2),		# center
+		Vector2(screen_size.x / 2, screen_size.y*0.3),		# center up
+		Vector2(screen_size.x / 2, screen_size.y*0.7),		# center down
+		Vector2(screen_size.x*0.3, screen_size.y / 2),		# center left
+		Vector2(screen_size.x*0.7, screen_size.y / 2)		# center right
+	]
+	
+	self.default_position_id = default_position_id
+	
+	# initialize rect position
+	rect_position = menu_scene_position_array[default_position_id] - rect_size / 2
+	
+	# make menus visible
+	show()
+
+
+func _process(delta):
+	pass
+
+
+# helper functions ------------------------------------------------------------
+
+
+
+# set/get functions -----------------------------------------------------------
+func set_default_position_id(new_val):
+	default_position_id = new_val
+	
+	if menu_scene_position_array:
+		menu_scene_position_array[0] = menu_scene_position_array[default_position_id]
+
+
+# signal functions ------------------------------------------------------------
+func _on_change_scene(new_game_scene_id, new_menu_scene_id, transition_type, transition_direction):
+	var target_rect_position
+	
+	match new_menu_scene_id:
+		GVM.MENU_SCENE_IDS.empty:
+			target_rect_position = menu_scene_position_array[empty_menu_scene_position_id]
+		GVM.MENU_SCENE_IDS.main:
+			target_rect_position = menu_scene_position_array[main_menu_scene_position_id]
+		GVM.MENU_SCENE_IDS.levels:
+			target_rect_position = menu_scene_position_array[levels_menu_scene_position_id]
+		GVM.MENU_SCENE_IDS.settings:
+			target_rect_position = menu_scene_position_array[settings_menu_scene_position_id]
+		GVM.MENU_SCENE_IDS.bugs:
+			target_rect_position = menu_scene_position_array[bugs_menu_scene_position_id]
+		GVM.MENU_SCENE_IDS.pause:
+			target_rect_position = menu_scene_position_array[pause_menu_scene_position_id]
+		GVM.MENU_SCENE_IDS.credits:
+			target_rect_position = menu_scene_position_array[credits_menu_scene_position_id]
+		GVM.MENU_SCENE_IDS.screenshots:
+			target_rect_position = menu_scene_position_array[screenshots_menu_scene_position_id]
+		GVM.MENU_SCENE_IDS.editor:
+			target_rect_position = menu_scene_position_array[editor_menu_scene_position_id]
+	
+	# adjust target rect position to account for menu dimensions and keep the menu centered on target
+	target_rect_position -= rect_size / 2
+	
+	$MenuTween.stop_all()
+	$MenuTween.interpolate_property(self, \"rect_position\", rect_position, target_rect_position, .5, Tween.TRANS_QUART, Tween.EASE_OUT, 0.0)
+	$MenuTween.start()
+	
+	
+
+"
+
+[sub_resource type="DynamicFont" id=2]
+resource_local_to_scene = true
+size = 100
+font_data = ExtResource( 3 )
+
+[node name="MenuSceneBase" type="VBoxContainer"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -960.0
+margin_top = -540.0
+margin_right = 960.0
+margin_bottom = 540.0
+mouse_filter = 2
+theme = ExtResource( 2 )
+script = SubResource( 1 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="FeatureThemeSetter" parent="." instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1920.0
+mouse_filter = 2
+
+[node name="MenuTween" type="Tween" parent="."]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_top = 4.0
+margin_right = 1920.0
+margin_bottom = 128.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MenuLabel" type="Label" parent="VBoxContainer"]
+margin_right = 1920.0
+margin_bottom = 120.0
+custom_fonts/font = SubResource( 2 )
+align = 1
+
+[node name="FeatureFontSizeOverrider" parent="VBoxContainer/MenuLabel" instance=ExtResource( 4 )]
+font_size = 100
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 124.0
+margin_right = 1920.0
+margin_bottom = 124.0
+mouse_filter = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+margin_left = 960.0
+margin_right = 960.0
+mouse_filter = 2

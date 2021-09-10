@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/GameScenes/GameSceneBase/GameSceneBaseTileMap/GameSceneBaseTileMap.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/GameScenes/GameSceneBase/GameSceneBaseItemLayer/GameSceneBaseItemLayer.tscn" type="PackedScene" id=2]
+[ext_resource path="res://UI/UIGameCanvasLayer.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/GameScenes/GameSceneBase/GameSceneBase.gd" type="Script" id=4]
+
+[node name="GameScene" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="GameUICanvasLayer" parent="." instance=ExtResource( 3 )]
+
+[node name="CharacterLayer" parent="." instance=ExtResource( 2 )]
+editor_category_id = 1
+
+[node name="EnvironmentLayer" parent="." instance=ExtResource( 2 )]
+editor_category_id = 2
+
+[node name="ObjectLayer" parent="." instance=ExtResource( 2 )]
+editor_category_id = 3
+
+[node name="TextLayer" parent="." instance=ExtResource( 2 )]
+editor_category_id = 4
+
+[node name="TriggerLayer" parent="." instance=ExtResource( 2 )]
+
+[node name="GameSceneBaseTileMap" parent="." instance=ExtResource( 1 )]

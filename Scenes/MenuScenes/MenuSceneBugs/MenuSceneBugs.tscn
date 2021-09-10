@@ -1,0 +1,360 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://Resources/Fonts/bauhaus-93/Bauhaus 93 Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scenes/MenuScenes/MenuSceneBase/MenuSceneBase.tscn" type="PackedScene" id=2]
+[ext_resource path="res://UI/UIButton/UIButtonMenu/UIButtonMenu.tscn" type="PackedScene" id=3]
+[ext_resource path="res://UI/UILabeledLineEdit/UILabeledLineEdit.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Entities/Features/FeatureButtonActions/FeatureButtonActionSignal/FeatureButtonActionSignal.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/MenuScenes/MenuSceneBugs/BugReportResources/BugReport.gd" type="Script" id=6]
+[ext_resource path="res://Entities/Features/FeatureFontSizeOverrider/FeatureFontSizeOverrider.tscn" type="PackedScene" id=7]
+[ext_resource path="res://UI/UISeveritySelector/UISeveritySelector.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Entities/Features/FeatureButtonActions/FeatureButtonActionGoTo/FeatureButtonActionGoTo.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Resources/Fonts/blinker/fonts_ttf/Blinker-SemiBold.ttf" type="DynamicFontData" id=10]
+
+[sub_resource type="DynamicFont" id=1]
+resource_local_to_scene = true
+size = 100
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=2]
+resource_local_to_scene = true
+size = 32
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=3]
+resource_local_to_scene = true
+size = 32
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=4]
+resource_local_to_scene = true
+size = 29
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=5]
+resource_local_to_scene = true
+size = 32
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=6]
+resource_local_to_scene = true
+size = 22
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=7]
+resource_local_to_scene = true
+size = 32
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=8]
+resource_local_to_scene = true
+size = 64
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=9]
+resource_local_to_scene = true
+size = 64
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=10]
+resource_local_to_scene = true
+size = 64
+font_data = ExtResource( 10 )
+
+[node name="MenuSceneBugs" instance=ExtResource( 2 )]
+margin_left = -831.0
+margin_top = -467.0
+margin_right = 831.0
+margin_bottom = 467.0
+default_position_id = 4
+bugs_menu_scene_position_id = 5
+
+[node name="FeatureThemeSetter" parent="." index="0"]
+margin_right = 1662.0
+
+[node name="VBoxContainer" parent="." index="2"]
+margin_right = 1662.0
+margin_bottom = 857.0
+custom_constants/separation = 32
+
+[node name="MenuLabel" parent="VBoxContainer" index="0"]
+margin_right = 1662.0
+margin_bottom = 120.0
+custom_fonts/font = SubResource( 1 )
+text = "Bug Report"
+
+[node name="HBoxContainer" parent="VBoxContainer" index="1"]
+margin_top = 152.0
+margin_right = 1662.0
+margin_bottom = 853.0
+
+[node name="VBoxContainer" parent="VBoxContainer/HBoxContainer" index="0"]
+margin_left = 0.0
+margin_right = 1662.0
+margin_bottom = 701.0
+size_flags_horizontal = 3
+custom_constants/separation = 16
+
+[node name="BugReport" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer" index="0"]
+margin_right = 1662.0
+margin_bottom = 701.0
+custom_constants/separation = 32
+script = ExtResource( 6 )
+
+[node name="HTTPRequest" type="HTTPRequest" parent="VBoxContainer/HBoxContainer/VBoxContainer/BugReport" index="0"]
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer/BugReport" index="1"]
+margin_right = 1662.0
+margin_bottom = 49.0
+custom_constants/separation = 32
+
+[node name="UsernameLineEdit" parent="VBoxContainer/HBoxContainer/VBoxContainer/BugReport/HBoxContainer2" index="0" instance=ExtResource( 4 )]
+margin_right = 1082.0
+margin_bottom = 49.0
+size_flags_horizontal = 3
+label = "Itch Username:"
+placeholder = "Not Required"
+font_size = 32
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer/BugReport/HBoxContainer2" index="1"]
+margin_left = 1114.0
+margin_right = 1467.0
+margin_bottom = 49.0
+custom_constants/separation = 16
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/BugReport/HBoxContainer2/HBoxContainer" index="0"]
+margin_top = 5.0
+margin_right = 117.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 2 )
+text = "Severity:"
+
+[node name="FeatureFontSizeOverrider" parent="VBoxContainer/HBoxContainer/VBoxContainer/BugReport/HBoxContainer2/HBoxContainer/Label" index="0" instance=ExtResource( 7 )]
+
+[node name="SeveritySelector" parent="VBoxContainer/HBoxContainer/VBoxContainer/BugReport/HBoxContainer2/HBoxContainer" index="1" instance=ExtResource( 8 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 133.0
+margin_right = 353.0
+margin_bottom = 49.0
+rect_min_size = Vector2( 220, 0 )
+custom_fonts/font = SubResource( 3 )
+align = 1
+items = [ "High/Critical", null, false, 1, null, "Medium", null, false, 2, null, "Minor", null, false, 3, null ]
+
+[node name="FeatureFontSizeOverrider2" parent="VBoxContainer/HBoxContainer/VBoxContainer/BugReport/HBoxContainer2/HBoxContainer/SeveritySelector" index="2" instance=ExtResource( 7 )]
+
+[node name="LevelLineEdit" parent="VBoxContainer/HBoxContainer/VBoxContainer/BugReport/HBoxContainer2" index="2" instance=ExtResource( 4 )]
+margin_left = 1499.0
+margin_right = 1662.0
+margin_bottom = 49.0
+label = "Level:"
+placeholder = "-"
+placeholder_align = 1
+font_size = 32
+
+[node name="TitleLineEdit" parent="VBoxContainer/HBoxContainer/VBoxContainer/BugReport" index="2" instance=ExtResource( 4 )]
+margin_top = 81.0
+margin_right = 1662.0
+margin_bottom = 130.0
+label = "Title:"
+placeholder = "Please provide a short description of the problem"
+font_size = 32
+
+[node name="TabContainer" type="TabContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer/BugReport" index="3"]
+margin_top = 162.0
+margin_right = 1662.0
+margin_bottom = 569.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 4 )
+tab_align = 0
+
+[node name="FeatureFontSizeOverrider" parent="VBoxContainer/HBoxContainer/VBoxContainer/BugReport/TabContainer" index="0" instance=ExtResource( 7 )]
+font_size = 29
+
+[node name="Steps To Reproduce Problem" type="ScrollContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer/BugReport/TabContainer" index="1"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 53.0
+margin_right = -4.0
+margin_bottom = -4.0
+rect_min_size = Vector2( 0, 350 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer/BugReport/TabContainer/Steps To Reproduce Problem" index="0"]
+margin_right = 1642.0
+margin_bottom = 526.0
+size_flags_horizontal = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabeledLineEdit1" parent="VBoxContainer/HBoxContainer/VBoxContainer/BugReport/TabContainer/Steps To Reproduce Problem/VBoxContainer" index="0" instance=ExtResource( 4 )]
+margin_right = 1642.0
+margin_bottom = 49.0
+label = "Step 1:"
+placeholder = "First step to reproduce problem"
+font_size = 32
+
+[node name="LabeledLineEdit2" parent="VBoxContainer/HBoxContainer/VBoxContainer/BugReport/TabContainer/Steps To Reproduce Problem/VBoxContainer" index="1" instance=ExtResource( 4 )]
+margin_top = 53.0
+margin_right = 1642.0
+margin_bottom = 102.0
+label = "Step 2:"
+placeholder = "(if needed)"
+font_size = 32
+
+[node name="LabeledLineEdit3" parent="VBoxContainer/HBoxContainer/VBoxContainer/BugReport/TabContainer/Steps To Reproduce Problem/VBoxContainer" index="2" instance=ExtResource( 4 )]
+margin_top = 106.0
+margin_right = 1642.0
+margin_bottom = 155.0
+label = "Step 3:"
+placeholder = "(if needed)"
+font_size = 32
+
+[node name="LabeledLineEdit4" parent="VBoxContainer/HBoxContainer/VBoxContainer/BugReport/TabContainer/Steps To Reproduce Problem/VBoxContainer" index="3" instance=ExtResource( 4 )]
+margin_top = 159.0
+margin_right = 1642.0
+margin_bottom = 208.0
+label = "Step 4:"
+placeholder = "(if needed)"
+font_size = 32
+
+[node name="LabeledLineEdit5" parent="VBoxContainer/HBoxContainer/VBoxContainer/BugReport/TabContainer/Steps To Reproduce Problem/VBoxContainer" index="4" instance=ExtResource( 4 )]
+margin_top = 212.0
+margin_right = 1642.0
+margin_bottom = 261.0
+label = "Step 5:"
+placeholder = "(if needed)"
+font_size = 32
+
+[node name="LabeledLineEdit6" parent="VBoxContainer/HBoxContainer/VBoxContainer/BugReport/TabContainer/Steps To Reproduce Problem/VBoxContainer" index="5" instance=ExtResource( 4 )]
+margin_top = 265.0
+margin_right = 1642.0
+margin_bottom = 314.0
+label = "Step 6:"
+placeholder = "(if needed)"
+font_size = 32
+
+[node name="LabeledLineEdit7" parent="VBoxContainer/HBoxContainer/VBoxContainer/BugReport/TabContainer/Steps To Reproduce Problem/VBoxContainer" index="6" instance=ExtResource( 4 )]
+margin_top = 318.0
+margin_right = 1642.0
+margin_bottom = 367.0
+label = "Step 7:"
+placeholder = "(if needed)"
+font_size = 32
+
+[node name="LabeledLineEdit8" parent="VBoxContainer/HBoxContainer/VBoxContainer/BugReport/TabContainer/Steps To Reproduce Problem/VBoxContainer" index="7" instance=ExtResource( 4 )]
+margin_top = 371.0
+margin_right = 1642.0
+margin_bottom = 420.0
+label = "Step 8:"
+placeholder = "(if needed)"
+font_size = 32
+
+[node name="LabeledLineEdit9" parent="VBoxContainer/HBoxContainer/VBoxContainer/BugReport/TabContainer/Steps To Reproduce Problem/VBoxContainer" index="8" instance=ExtResource( 4 )]
+margin_top = 424.0
+margin_right = 1642.0
+margin_bottom = 473.0
+label = "Step 9:"
+placeholder = "(if needed)"
+font_size = 32
+
+[node name="LabeledLineEdit10" parent="VBoxContainer/HBoxContainer/VBoxContainer/BugReport/TabContainer/Steps To Reproduce Problem/VBoxContainer" index="9" instance=ExtResource( 4 )]
+margin_top = 477.0
+margin_right = 1642.0
+margin_bottom = 526.0
+label = "Step 10:"
+placeholder = "(if needed)"
+font_size = 32
+
+[node name="ExpectedResult" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer/BugReport/TabContainer" index="2"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 53.0
+margin_right = -4.0
+margin_bottom = -4.0
+rect_min_size = Vector2( 0, 350 )
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/BugReport/TabContainer/ExpectedResult" index="0"]
+margin_right = 1492.0
+margin_bottom = 37.0
+custom_fonts/font = SubResource( 5 )
+text = "Please describe what you were expecting to happen"
+align = 1
+
+[node name="FeatureFontSizeOverrider" parent="VBoxContainer/HBoxContainer/VBoxContainer/BugReport/TabContainer/ExpectedResult/Label" index="0" instance=ExtResource( 7 )]
+
+[node name="TextEdit" type="TextEdit" parent="VBoxContainer/HBoxContainer/VBoxContainer/BugReport/TabContainer/ExpectedResult" index="1"]
+margin_top = 41.0
+margin_right = 1492.0
+margin_bottom = 391.0
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 6 )
+
+[node name="ActualResult" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer/BugReport/TabContainer" index="3"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 53.0
+margin_right = -4.0
+margin_bottom = -4.0
+rect_min_size = Vector2( 0, 350 )
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/BugReport/TabContainer/ActualResult" index="0"]
+margin_right = 1492.0
+margin_bottom = 37.0
+custom_fonts/font = SubResource( 7 )
+text = "Please describe what actually happened"
+align = 1
+
+[node name="FeatureFontSizeOverrider" parent="VBoxContainer/HBoxContainer/VBoxContainer/BugReport/TabContainer/ActualResult/Label" index="0" instance=ExtResource( 7 )]
+
+[node name="TextEdit" type="TextEdit" parent="VBoxContainer/HBoxContainer/VBoxContainer/BugReport/TabContainer/ActualResult" index="1"]
+margin_top = 41.0
+margin_right = 1492.0
+margin_bottom = 391.0
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 6 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer/BugReport" index="4"]
+margin_top = 601.0
+margin_right = 1662.0
+margin_bottom = 701.0
+custom_constants/separation = 64
+alignment = 1
+
+[node name="BackButton" parent="VBoxContainer/HBoxContainer/VBoxContainer/BugReport/HBoxContainer" index="0" instance=ExtResource( 3 )]
+margin_left = 227.0
+margin_right = 587.0
+margin_bottom = 100.0
+custom_fonts/font = SubResource( 8 )
+text = "Back"
+
+[node name="FeatureButtonActionGoTo" parent="VBoxContainer/HBoxContainer/VBoxContainer/BugReport/HBoxContainer/BackButton" index="2" instance=ExtResource( 9 )]
+new_game_scene_id = 0
+new_menu_scene_id = 1
+
+[node name="SendButton" parent="VBoxContainer/HBoxContainer/VBoxContainer/BugReport/HBoxContainer" index="1" instance=ExtResource( 3 )]
+margin_left = 651.0
+margin_right = 1011.0
+margin_bottom = 100.0
+custom_fonts/font = SubResource( 9 )
+text = "Send"
+
+[node name="FeatureButtonActionSignal" parent="VBoxContainer/HBoxContainer/VBoxContainer/BugReport/HBoxContainer/SendButton" index="2" instance=ExtResource( 5 )]
+signal_name = "send_bug_report"
+
+[node name="ResumeButton" parent="VBoxContainer/HBoxContainer/VBoxContainer/BugReport/HBoxContainer" index="2" instance=ExtResource( 3 )]
+margin_left = 1075.0
+margin_right = 1435.0
+margin_bottom = 100.0
+custom_fonts/font = SubResource( 10 )
+text = "Resume"
+
+[node name="FeatureButtonActionGoTo" parent="VBoxContainer/HBoxContainer/VBoxContainer/BugReport/HBoxContainer/ResumeButton" index="2" instance=ExtResource( 9 )]
+[connection signal="request_completed" from="VBoxContainer/HBoxContainer/VBoxContainer/BugReport/HTTPRequest" to="VBoxContainer/HBoxContainer/VBoxContainer/BugReport" method="_on_HTTPRequest_request_completed"]

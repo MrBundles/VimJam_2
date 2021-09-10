@@ -1,0 +1,84 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://UI/UIButton/UIButtonIcon/UIButtonIcon.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Entities/Features/FeatureButtonEffects/FeatureButtonEffectIcon/FeatureButtonEffectIcon.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Resources/Inkscape/Icons/ResetIcon.png" type="Texture" id=3]
+[ext_resource path="res://Resources/Inkscape/Icons/BugIcon.png" type="Texture" id=4]
+[ext_resource path="res://Resources/Themes/default_theme.tres" type="Theme" id=5]
+[ext_resource path="res://Entities/Features/FeatureButtonActions/FeatureButtonActionSignal/FeatureButtonActionSignal.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Entities/Features/FeatureThemeSetter/FeatureThemeSetter.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Entities/Features/FeatureButtonActions/FeatureButtonActionGoTo/FeatureButtonActionGoTo.tscn" type="PackedScene" id=8]
+
+[node name="GameUICanvasLayer" type="CanvasLayer"]
+pause_mode = 2
+
+[node name="GameUI" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+theme = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FeatureThemeSetter" parent="GameUI" instance=ExtResource( 7 )]
+mouse_filter = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -80.0
+margin_bottom = 240.0
+mouse_filter = 2
+custom_constants/separation = 16
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+margin_right = 64.0
+margin_bottom = 240.0
+mouse_filter = 2
+custom_constants/separation = 16
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="HBoxContainer/VBoxContainer"]
+margin_right = 64.0
+
+[node name="PauseButton" parent="HBoxContainer/VBoxContainer" instance=ExtResource( 1 )]
+margin_top = 16.0
+margin_bottom = 80.0
+
+[node name="FeatureButtonActionGoTo" parent="HBoxContainer/VBoxContainer/PauseButton" instance=ExtResource( 8 )]
+new_menu_scene_id = 5
+
+[node name="FeatureButtonIconEffect" parent="HBoxContainer/VBoxContainer/PauseButton" instance=ExtResource( 2 )]
+
+[node name="ResetButton" parent="HBoxContainer/VBoxContainer" instance=ExtResource( 1 )]
+margin_top = 96.0
+margin_bottom = 160.0
+button_icon = ExtResource( 3 )
+button_label = "Reset"
+
+[node name="FeatureButtonActionSignal" parent="HBoxContainer/VBoxContainer/ResetButton" instance=ExtResource( 6 )]
+signal_name = "reset_scene"
+
+[node name="FeatureButtonIconEffect" parent="HBoxContainer/VBoxContainer/ResetButton" instance=ExtResource( 2 )]
+
+[node name="BugsButton" parent="HBoxContainer/VBoxContainer" instance=ExtResource( 1 )]
+margin_top = 176.0
+margin_bottom = 240.0
+button_icon = ExtResource( 4 )
+button_label = "Bug Report"
+
+[node name="FeatureButtonActionGoTo" parent="HBoxContainer/VBoxContainer/BugsButton" instance=ExtResource( 8 )]
+new_menu_scene_id = 4
+
+[node name="FeatureButtonIconEffect" parent="HBoxContainer/VBoxContainer/BugsButton" instance=ExtResource( 2 )]
+
+[node name="Control" type="Control" parent="HBoxContainer"]
+margin_left = 80.0
+margin_right = 80.0
+margin_bottom = 240.0

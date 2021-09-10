@@ -1,0 +1,32 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Entities/Features/FeatureFontSizeOverrider/FeatureFontSizeOverrider.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Fonts/bauhaus-93/Bauhaus 93 Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Entities/Features/FeatureButtonEffects/FeatureButtonEffectUI/FeatureButtonEffectUI.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Entities/Features/FeatureButtonActions/FeatureButtonActionGoTo/FeatureButtonActionGoTo.tscn" type="PackedScene" id=4]
+[ext_resource path="res://UI/UIButton/UIButtonLevelSelect/UIButtonLevelSelect.gd" type="Script" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+resource_local_to_scene = true
+size = 64
+font_data = ExtResource( 2 )
+
+[node name="ButtonLevelSelect" type="Button"]
+margin_right = 100.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 100 )
+custom_fonts/font = SubResource( 1 )
+text = "-01"
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FeatureFontSizeOverrider" type="Node" parent="."]
+script = ExtResource( 1 )
+font_size = 64
+
+[node name="FeatureButtonEffectPop" parent="." instance=ExtResource( 3 )]
+
+[node name="FeatureButtonActionGoTo" parent="." instance=ExtResource( 4 )]
+[connection signal="pressed" from="." to="." method="_on_LevelSelectButton_pressed"]
