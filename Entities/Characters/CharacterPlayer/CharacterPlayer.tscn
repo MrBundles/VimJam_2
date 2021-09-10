@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://Entities/Characters/CharacterPlayer/CharacterPlayer.gd" type="Script" id=1]
 [ext_resource path="res://Entities/Characters/CharacterPlayer/CharacterPlayerSprites/Battery.png" type="Texture" id=2]
 [ext_resource path="res://Entities/Characters/CharacterPlayer/CharacterPlayerSprites/Foot.png" type="Texture" id=3]
 [ext_resource path="res://Entities/Characters/CharacterPlayer/CharacterPlayerSprites/Face.png" type="Texture" id=4]
+[ext_resource path="res://Entities/Objects/ObjectFabricLine/ObjectFabricLine.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Entities/Characters/CharacterPlayer/CharacterPlayerSprites/SadFace.png" type="Texture" id=6]
+[ext_resource path="res://Entities/Characters/CharacterPlayer/CharacterPlayer.gd" type="Script" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 resource_local_to_scene = true
@@ -13,7 +14,7 @@ extents = Vector2( 16, 63 )
 [node name="CharacterPlayer" type="KinematicBody2D"]
 z_index = 2
 collision_layer = 2
-script = ExtResource( 1 )
+script = ExtResource( 7 )
 velocity_max = Vector2( 25, 75 )
 velocity_max_push = Vector2( 10, 75 )
 h_accel = 2
@@ -27,6 +28,12 @@ max_lean_lerp_val = 1000.0
 happy_face = ExtResource( 4 )
 sad_face = ExtResource( 6 )
 
+[node name="TransitionTween" type="Tween" parent="."]
+
+[node name="CoyoteTimer" type="Timer" parent="."]
+wait_time = 0.15
+one_shot = true
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -15 )
 shape = SubResource( 1 )
@@ -34,16 +41,12 @@ __meta__ = {
 "_edit_ik_": true
 }
 
-[node name="CoyoteTimer" type="Timer" parent="."]
-wait_time = 0.15
-one_shot = true
-
 [node name="BatteryPivot" type="Node2D" parent="."]
 position = Vector2( 0, 24 )
 z_index = 1
 
 [node name="Battery" type="Sprite" parent="BatteryPivot"]
-position = Vector2( 0, -32 )
+position = Vector2( 0, -48 )
 texture = ExtResource( 2 )
 __meta__ = {
 "_edit_ik_": true
@@ -116,4 +119,10 @@ position = Vector2( -40, 24 )
 [node name="RightJumpPosition" type="Position2D" parent="Feet"]
 position = Vector2( 40, 24 )
 
-[node name="TransitionTween" type="Tween" parent="."]
+[node name="RightArmLine" parent="." instance=ExtResource( 5 )]
+position = Vector2( -75.9819, 7.55099 )
+points = PoolVector2Array( 76.8368, -22.9609, 103.737, -23.9048, 126.862, -25.7925, 146.212, -24.8487, 166.977, -24.8487 )
+
+[node name="LeftArmLine" parent="." instance=ExtResource( 5 )]
+position = Vector2( -87.3084, 11.3265 )
+points = PoolVector2Array( 76.8368, -22.9609, 103.737, -23.9048, 126.862, -25.7925, 146.212, -24.8487, 166.977, -24.8487 )

@@ -12,3 +12,6 @@ point_radius = 5.0
 point_color = Color( 0.666667, 0.294118, 0.294118, 1 )
 line_width = 5.0
 line_color = Color( 0.254902, 0.807843, 0.317647, 1 )
+arm_lerp_val = 0.1
+arm_target_multiplier = Vector2( 7, 1 )
+max_iterations = 2
