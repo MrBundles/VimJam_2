@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Entities/Objects/ObjectFabricLine/ObjectFabricLine.gd" type="Script" id=1]
+
+[sub_resource type="Curve" id=1]
+
+[node name="ObjectFabricLine" type="Line2D"]
+points = PoolVector2Array( 517.757, 219.512, 696.138, 217.134, 769.869, 300.379, 1026.74, 302.757, 1107.6, 397.894 )
+width_curve = SubResource( 1 )
+script = ExtResource( 1 )
+point_radius = 5.0
+point_color = Color( 0.666667, 0.294118, 0.294118, 1 )
+line_width = 5.0
+line_color = Color( 0.254902, 0.807843, 0.317647, 1 )

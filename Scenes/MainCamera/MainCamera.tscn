@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=2]
-
-[ext_resource path="res://Scenes/MainCamera/MainCamera.gd" type="Script" id=1]
-
-[node name="MainCamera" type="Camera2D"]
-position = Vector2( 958.916, 539.39 )
-current = true
-script = ExtResource( 1 )

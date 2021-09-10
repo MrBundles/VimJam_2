@@ -22,7 +22,7 @@ layer = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
-color = Color( 0.294118, 0.294118, 0.294118, 1 )
+color = Color( 0.6, 0.6, 0.6, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
