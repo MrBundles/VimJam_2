@@ -120,9 +120,11 @@ position = Vector2( -40, 24 )
 position = Vector2( 40, 24 )
 
 [node name="RightArmLine" parent="." instance=ExtResource( 5 )]
-position = Vector2( -75.9819, 7.55099 )
-points = PoolVector2Array( 76.8368, -22.9609, 103.737, -23.9048, 126.862, -25.7925, 146.212, -24.8487, 166.977, -24.8487 )
+position = Vector2( 10, 0 )
+z_index = 1
+points = PoolVector2Array(  )
 
-[node name="LeftArmLine" parent="." instance=ExtResource( 5 )]
-position = Vector2( -87.3084, 11.3265 )
-points = PoolVector2Array( 76.8368, -22.9609, 103.737, -23.9048, 126.862, -25.7925, 146.212, -24.8487, 166.977, -24.8487 )
+[node name="LeftArm" parent="." instance=ExtResource( 5 )]
+position = Vector2( -10, 0 )
+z_index = 1
+points = PoolVector2Array(  )

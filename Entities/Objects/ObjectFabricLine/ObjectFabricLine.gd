@@ -12,12 +12,19 @@ export(Color) var point_color
 export(float, 0, 10) var line_width
 export(Color) var line_color
 
+export var point_count = 5
+export var point_spread = 20
 var segment_lengths = []
 var target = Vector2.ZERO
+var target_y_offset = 0
 export var arm_lerp_val = .3
 export var arm_target_multiplier = Vector2(1,1)
 export(int) var max_iterations = 100
 export(float) var min_acceptable_distance = .01
+
+
+# RNG
+var rng = RandomNumberGenerator.new()
 
 
 # main functions --------------------------------------------------------------
@@ -26,6 +33,7 @@ func _ready():
 	
 	
 	# initialize
+	init_points()
 	init_segment_lengths()
 
 
@@ -68,6 +76,12 @@ func get_input():
 		fabric_update()
 
 
+func init_points():
+	points.empty()
+	for i in range(point_count):
+		add_point(Vector2(i * point_spread, 0), i)
+
+
 func init_segment_lengths():
 	# do not try to draw line if there are no points
 	if points.size() < 1:
@@ -87,9 +101,9 @@ func fabric_update():
 		return
 	
 	var origin = points[0]
-	target.x = lerp(points[points.size()-1].x, -get_parent().velocity.x * arm_target_multiplier.x, arm_lerp_val)
-	target.y = lerp(points[points.size()-1].y, -get_parent().velocity.y * arm_target_multiplier.y, arm_lerp_val)
-	print(target)
+	target_y_offset = lerp(target_y_offset, rng.randf_range(-32, 32), .5)
+	target.x = lerp(target.x, -get_parent().velocity.x * arm_target_multiplier.x, arm_lerp_val)
+	target.y = lerp(target.y, -get_parent().velocity.y * arm_target_multiplier.y + target_y_offset, arm_lerp_val)
 	
 	for iteration in range(max_iterations):
 		var starting_from_origin = iteration % 2 == 1
