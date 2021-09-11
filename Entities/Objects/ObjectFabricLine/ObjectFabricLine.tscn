@@ -1,18 +1,22 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=2 format=2]
 
 [ext_resource path="res://Entities/Objects/ObjectFabricLine/ObjectFabricLine.gd" type="Script" id=1]
 
-[sub_resource type="Curve" id=1]
-
 [node name="ObjectFabricLine" type="Line2D"]
 points = PoolVector2Array( 517.757, 219.512, 696.138, 217.134, 769.869, 300.379, 1026.74, 302.757, 1107.6, 397.894 )
-width_curve = SubResource( 1 )
+width = 15.0
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
 script = ExtResource( 1 )
 point_radius = 5.0
-point_color = Color( 0.666667, 0.294118, 0.294118, 1 )
-line_width = 5.0
-line_color = Color( 0.254902, 0.807843, 0.317647, 1 )
-point_count = 4
-arm_lerp_val = 0.05
-arm_target_multiplier = Vector2( 5, 20 )
+point_color = Color( 0.666667, 0.294118, 0.294118, 0 )
+line_width = 10.0
+line_color = Color( 0.254902, 0.807843, 0.317647, 0 )
+point_count = 8
+point_spread = 8
+arm_flap_multiplier = 100.0
+target_gravity = 0.001
+arm_lerp_val = Vector2( 0.025, 0.1 )
+arm_target_multiplier = Vector2( 1, 0.3 )
 max_iterations = 2

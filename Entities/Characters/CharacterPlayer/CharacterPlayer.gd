@@ -48,10 +48,6 @@ func _ready():
 func _physics_process(delta):
 	get_input()
 	move_and_slide(velocity * delta * 1000, Vector2.UP, false, 4, PI/4, false)
-	update_feet(delta)
-	update_lean(delta)
-	if socket_align_x != -1:
-		socket_align(delta)
 
 
 # helper functions --------------------------------------
@@ -89,45 +85,6 @@ func get_input():
 	
 	#apply gravity
 	velocity.y = clamp(velocity.y +gravity, -velocity_max.y, velocity_max.y)
-
-
-func update_feet(delta):
-	var foot_offset = Vector2(0, -4)
-	var left_foot_target_pos = Vector2.ZERO
-	var right_foot_target_pos = Vector2.ZERO
-	
-	#set feet target positions
-	if $CoyoteTimer.is_stopped():
-		left_foot_target_pos = lerp(left_jump_pos.global_position, left_walk_pivot.global_position, abs(velocity.y) / velocity_max.y)
-		right_foot_target_pos = lerp(right_jump_pos.global_position, right_walk_pivot.global_position,  abs(velocity.y) / velocity_max.y)
-	else:
-		left_foot_target_pos.x = left_walk_pos.global_position.x + foot_offset.x
-		left_foot_target_pos.y = clamp(left_walk_pos.global_position.y + foot_offset.y, left_walk_pivot.global_position.y - 32, left_walk_pivot.global_position.y)
-		right_foot_target_pos.x = right_walk_pos.global_position.x + foot_offset.x
-		right_foot_target_pos.y = clamp(right_walk_pos.global_position.y + foot_offset.y, right_walk_pivot.global_position.y - 32, right_walk_pivot.global_position.y)
-	
-	#lerp feet to target positions
-	left_foot.global_position = lerp(left_foot.global_position, left_foot_target_pos, clamp(left_foot.global_position.distance_to(left_foot_target_pos) / max_feet_lerp_val * delta * 1000, 0, 1))
-	right_foot.global_position = lerp(right_foot.global_position, right_foot_target_pos, clamp(right_foot.global_position.distance_to(right_foot_target_pos) / max_feet_lerp_val * delta * 1000, 0, 1))
-	
-	if velocity.x != 0 and not $CoyoteTimer.is_stopped():
-		left_walk_pivot.rotation_degrees += velocity.x * delta * 1000 * foot_speed_mult
-		right_walk_pivot.rotation_degrees += velocity.x * delta * 1000 * foot_speed_mult
-	else:
-		left_walk_pivot.rotation_degrees = 0
-		right_walk_pivot.rotation_degrees = 0
-
-
-func update_lean(delta):
-	var target_rotation_degrees = -velocity.x
-	$BatteryPivot.rotation_degrees = lerp($BatteryPivot.rotation_degrees, target_rotation_degrees, clamp(abs($BatteryPivot.rotation_degrees - target_rotation_degrees) / max_lean_lerp_val * delta * 1000, 0, 1))
-
-
-func socket_align(delta):
-	if abs(global_position.x - socket_align_x) > 0.1:
-		global_position.x = lerp(global_position.x, socket_align_x, 0.2)
-	else:
-		socket_align_x = -1
 
 
 # set/get functions --------------------------------------
