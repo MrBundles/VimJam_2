@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://Entities/Characters/CharacterPlayer/CharacterPlayerSprites/Body.png" type="Texture" id=1]
 [ext_resource path="res://Entities/Objects/ObjectFabricLine/ObjectFabricArm/ObjectFabricArm.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Entities/Objects/ObjectFabricLine/ObjectFabricLeg/ObjectFabricLeg.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Entities/Characters/CharacterPlayer/CharacterPlayerSprites/Face.png" type="Texture" id=4]
+[ext_resource path="res://Entities/Objects/ObjectFabricLine/ObjectFabricHead/ObjectFabricHead.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Entities/Characters/CharacterPlayer/CharacterPlayerSprites/SadFace.png" type="Texture" id=6]
 [ext_resource path="res://Entities/Characters/CharacterPlayer/CharacterPlayer.gd" type="Script" id=7]
 
@@ -15,10 +16,10 @@ extents = Vector2( 31, 31 )
 z_index = 2
 collision_layer = 2
 script = ExtResource( 7 )
-velocity_max = Vector2( 15, 75 )
+velocity_max = Vector2( 30, 75 )
 velocity_max_push = Vector2( 10, 75 )
-h_accel = 3
-h_decel = 2
+h_accel = 1
+h_decel = 1
 gravity = 2
 jump = 55
 foot_speed_mult = 0.075
@@ -35,13 +36,14 @@ wait_time = 0.15
 one_shot = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 32 )
+position = Vector2( 0, 12 )
 shape = SubResource( 1 )
 __meta__ = {
 "_edit_ik_": true
 }
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="BodySprite" type="Sprite" parent="."]
+modulate = Color( 0.184314, 0.137255, 0.137255, 1 )
 position = Vector2( 0, -32 )
 texture = ExtResource( 1 )
 
@@ -53,10 +55,20 @@ direction = 3
 position = Vector2( -10, -32 )
 
 [node name="RightFabricLeg" parent="." instance=ExtResource( 3 )]
-position = Vector2( 16, 0 )
-direction = 3
+position = Vector2( 10, 0 )
 init_raycast_rotation_degrees = 45.0
 
 [node name="LeftFabricLeg" parent="." instance=ExtResource( 3 )]
-position = Vector2( -16, 0 )
+position = Vector2( -10, 0 )
+leg_is_lead = false
 init_raycast_rotation_degrees = 90.0
+
+[node name="FabricHead" parent="." instance=ExtResource( 5 )]
+position = Vector2( 0, -32 )
+default_color = Color( 0.768627, 0.431373, 0.25098, 1 )
+point_count = 7
+point_spread = null
+max_iterations = null
+min_acceptable_distance = null
+head_lerp_val = null
+head_target_multiplier = null

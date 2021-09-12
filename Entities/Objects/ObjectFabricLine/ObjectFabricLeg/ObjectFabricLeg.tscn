@@ -3,12 +3,18 @@
 [ext_resource path="res://Entities/Objects/ObjectFabricLine/ObjectFabricLeg/ObjectFabricLeg.gd" type="Script" id=1]
 
 [node name="ObjectFabricLeg" type="Line2D"]
+default_color = Color( 1, 0.603922, 0.992157, 1 )
+joint_mode = 1
+begin_cap_mode = 2
+end_cap_mode = 2
 script = ExtResource( 1 )
-point_count = 11
-point_spread = 8
+point_count = 3
+point_spread = 28
 max_iterations = 10
-step_distance = 64.0
+leg_lerp_val = Vector2( 0.3, 0.1 )
+step_distance = 72.0
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
+rotation = 1.5708
 enabled = true
 cast_to = Vector2( 100, 0 )
