@@ -727,6 +727,9 @@
        id="rect926"
        style="fill:#ffffff;fill-opacity:0;stroke-width:1.019;stroke-linecap:round;stroke-linejoin:bevel" />
     <ellipse
+       inkscape:export-ydpi="48"
+       inkscape:export-xdpi="48"
+       inkscape:export-filename="D:\Kevin\_Godot\Projects\Jam_Games\VimJam\VimJam_2\Entities\Characters\CharacterPlayer\CharacterPlayerSprites\Body.png"
        ry="16.933332"
        rx="25.400002"
        cy="220.13333"
@@ -790,5 +793,26 @@
          inkscape:transform-center-y="3.7212376"
          transform="matrix(-0.18722735,-0.05016742,0.25881905,-0.96592582,-301.64212,367.13576)" />
     </g>
+    <path
+       inkscape:export-ydpi="48"
+       inkscape:export-xdpi="48"
+       inkscape:export-filename="D:\Kevin\_Godot\Projects\Jam_Games\VimJam\VimJam_2\Entities\Characters\CharacterPlayer\CharacterPlayerSprites\Beak.png"
+       transform="matrix(0.66666606,0,0,0.57735051,-95.955735,85.882371)"
+       inkscape:transform-center-y="-2.5372343e-06"
+       inkscape:transform-center-x="2.8222187"
+       d="m -313.26668,217.86468 25.4,-14.66469 0,29.32939 z"
+       inkscape:randomized="0"
+       inkscape:rounded="0"
+       inkscape:flatsided="true"
+       sodipodi:arg2="4.1887902"
+       sodipodi:arg1="3.1415927"
+       sodipodi:r2="8.4666662"
+       sodipodi:r1="16.933332"
+       sodipodi:cy="217.86469"
+       sodipodi:cx="-296.33334"
+       sodipodi:sides="3"
+       id="path950"
+       style="fill:#ffffff;fill-opacity:0.982808;stroke-width:1.019;stroke-linecap:round;stroke-linejoin:bevel"
+       sodipodi:type="star" />
   </g>
 </svg>

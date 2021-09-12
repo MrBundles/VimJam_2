@@ -21,6 +21,7 @@ export var h_accel = 10
 export var h_decel = 10
 export var gravity = 10
 export var jump = 10
+export var float_val = 10.0
 export var foot_speed_mult = 2.0
 
 export var max_feet_lerp_val = 25.0
@@ -84,6 +85,10 @@ func get_input():
 	
 	#apply gravity
 	velocity.y = clamp(velocity.y +gravity, -velocity_max.y, velocity_max.y)
+	
+	#apply float if falling and holding the jump button
+	if Input.is_action_pressed("ui_up") and velocity.y > 0:
+		velocity.y -= float_val
 
 
 # set/get functions --------------------------------------
