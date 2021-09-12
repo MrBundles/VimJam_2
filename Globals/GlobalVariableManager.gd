@@ -34,6 +34,7 @@ enum EDITOR_POINTER_MODES {select, move, rotate}
 enum EDITOR_MODES {null, edit, test, debug}
 #enum EDITOR_VIEW_MODES {null, }
 
+
 # variables -------------------------------------------------------------------
 # build version
 export var version = 0.0

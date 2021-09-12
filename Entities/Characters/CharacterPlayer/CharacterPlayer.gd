@@ -39,8 +39,7 @@ export(Texture) var sad_face
 # main functions --------------------------------------
 func _ready():
 	# connect signals
-	GSM.connect("socket_plugged", self, "_on_socket_plugged")
-	GSM.connect("terminal_on", self, "_on_terminal_on")
+	
 	
 	velocity_max_init = velocity_max
 

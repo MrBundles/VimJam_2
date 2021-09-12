@@ -1,4 +1,5 @@
 extends Line2D
+class_name FabricLine
 
 # references ------------------------------------------------------------------
 
@@ -7,33 +8,32 @@ extends Line2D
 
 
 # variables -------------------------------------------------------------------
-export(float, 0, 10) var point_radius
-export(Color) var point_color
-export(float, 0, 10) var line_width
-export(Color) var line_color
+# variables for fabric line visuals, may remove
+#export(float, 0, 10) var point_radius
+#export(Color) var point_color
+#export(float, 0, 10) var line_width
+#export(Color) var line_color
 
-export var point_count = 5 setget set_point_count
-export var point_spread = 20 setget set_point_spread
+# variables for generating the fabric line points
+export var point_count = 5
+export var point_spread = 20
+
+# segment length variables used in fabric calculations
 var segment_lengths = []
 var segment_length_sum = 0.0
+
+# this is the point the fabric line is reaching for. All scripts inheriting this FabricLine class can animate this line by manipulating this value
 var target_position = Vector2.ZERO
-var target_y_offset = 0
-export var arm_flap_multiplier = 1.0
-export var arm_flap_sin = true
-export var target_gravity = 5.0
-export var arm_lerp_val = Vector2(.3,.3)
-export var arm_target_multiplier = Vector2(1,1)
+
+# variables used in fabric calculations
 export(int) var max_iterations = 100
 export(float) var min_acceptable_distance = .01
 
+# variables used to calculate current origin velocity
 var current_origin_position = Vector2.ZERO
 var previous_origin_position = Vector2.ZERO
-var current_origin_velocity = 0.0
-
-
-# RNG
-var rng = RandomNumberGenerator.new()
-var random_offset_val = rng.randf_range(-1000, 1000)
+var current_origin_velocity = Vector2.ZERO
+var max_origin_velocity = Vector2(1,1)
 
 
 # main functions --------------------------------------------------------------
@@ -51,28 +51,27 @@ func _ready():
 
 
 func _process(delta):
-	get_input()
-	update_target_position(delta)
+	current_origin_velocity_update(delta)
 	fabric_update()
-	update()
+#	update()
 
 
-func _draw():
-	# do not try to draw line if there are no points
-	if points.size() < 1:
-		return
-	
-	var previous_point = points[0]
-	for point in points:
-		# draw each point
-		draw_circle(point, point_radius, point_color)
-		
-		# draw a line segment between each point
-		if point != previous_point:
-			draw_line(point, previous_point, line_color, line_width)
-		
-		previous_point = point
-	
+#func _draw():
+#	# do not try to draw line if there are no points
+#	if points.size() < 1:
+#		return
+#
+#	var previous_point = points[0]
+#	for point in points:
+#		# draw each point
+#		draw_circle(point, point_radius, point_color)
+#
+#		# draw a line segment between each point
+#		if point != previous_point:
+#			draw_line(point, previous_point, line_color, line_width)
+#
+#		previous_point = point
+
 	# draw target position, currently the global mouse position
 #	draw_circle(target_position, point_radius * 2.0, point_color)
 
@@ -85,39 +84,10 @@ func _get_configuration_warning():
 
 
 # helper functions ------------------------------------------------------------
-func get_input():
-	if Input.is_action_just_pressed("fabric_update"):
-		fabric_update()
-
-
 func init_points():
 	points.empty()
 	for i in range(point_count):
 		add_point(Vector2(i * point_spread, 0), i)
-
-
-func update_target_position(delta):
-	
-	current_origin_position = points[0] + get_parent().global_position
-	current_origin_velocity = (current_origin_position - previous_origin_position) / delta
-#	print("Current Velocity: " + str(current_origin_velocity))
-	previous_origin_position = current_origin_position
-	
-	#add gravity to target_position.y
-	target_position.y += target_gravity * (segment_length_sum / clamp(abs(target_position.x), 1, 1000))
-	
-	#influence target_position.y to create wavy motion
-	if arm_flap_sin:
-		target_position.y += sin((current_origin_position.x) / 15) * arm_flap_multiplier * (abs(target_position.x) / segment_length_sum)
-	else:
-		target_position.y += cos((current_origin_position.x) / 15) * arm_flap_multiplier * (abs(target_position.x) / segment_length_sum)
-	
-	target_position.x = clamp(lerp(target_position.x, -current_origin_velocity.x * arm_target_multiplier.x, arm_lerp_val.x), -segment_length_sum, segment_length_sum)
-	target_position.y = clamp(lerp(target_position.y, -current_origin_velocity.y * arm_target_multiplier.y, arm_lerp_val.y), -segment_length_sum, segment_length_sum)
-	
-#	target_y_offset = lerp(target_y_offset, rng.randf_range(-32, 32), .5)
-#	target_position.x = lerp(target_position.x, -current_origin_velocity * arm_target_multiplier.x, arm_lerp_val)
-#	target_position.y = lerp(target_position.y, -get_parent().velocity.y * arm_target_multiplier.y + target_y_offset, arm_lerp_val)
 
 
 func init_segment_lengths():
@@ -135,10 +105,21 @@ func init_segment_lengths():
 			segment_lengths.append(segment_length)
 			segment_length_sum += segment_length
 			previous_point = point
+
+
+func current_origin_velocity_update(delta):
+# calculate current velocity of the origin of the line
+	current_origin_position = points[0] + get_parent().global_position
+	current_origin_velocity = (current_origin_position - previous_origin_position) / delta
+	previous_origin_position = current_origin_position
 	
-#	segment_length_sum *= .8
+	if abs(current_origin_velocity.x) > max_origin_velocity.x:
+		max_origin_velocity.x = abs(current_origin_velocity.x)
 	
-	
+	if abs(current_origin_velocity.y) > max_origin_velocity.y:
+		max_origin_velocity.y = abs(current_origin_velocity.y)
+
+
 func fabric_update():
 	# do not try to process points if there are no points
 	if points.size() < 1:
@@ -172,16 +153,6 @@ func invert_points():
 
 
 # set/get functions -----------------------------------------------------------
-func set_point_count(new_val):
-	point_count = new_val
-#	init_points()
-#	init_segment_lengths()
-
-
-func set_point_spread(new_val):
-	point_spread = new_val
-#	init_points()
-#	init_segment_lengths()
 
 
 # signal functions ------------------------------------------------------------

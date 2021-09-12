@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Entities/Objects/ObjectFabricLine/ObjectFabricArm/ObjectFabricArm.gd" type="Script" id=1]
+
+[node name="ObjectFabricArm" type="Line2D"]
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+script = ExtResource( 1 )
+point_count = 8
+point_spread = 8
+max_iterations = 10
+target_gravity = 0.1
+arm_lerp_val = Vector2( 0.025, 0.1 )
+arm_target_multiplier = Vector2( 1, 0.3 )
