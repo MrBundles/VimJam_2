@@ -48,6 +48,10 @@ func _ready():
 	init_points()
 	init_segment_lengths()
 	
+	# reset the max_origin_velocity to account for initial settline of the points, otherwise this value could be huge upon initial loading of the scene
+	yield(get_tree().create_timer(1.0), "timeout")
+	max_origin_velocity = Vector2(1,1)
+	
 
 
 func _process(delta):

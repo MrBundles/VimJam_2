@@ -4,12 +4,11 @@
 
 [node name="ObjectFabricLeg" type="Line2D"]
 script = ExtResource( 1 )
-point_count = 8
+point_count = 11
 point_spread = 8
 max_iterations = 10
-leg_lerp_val = Vector2( 0.3, 0.1 )
-step_distance = 128.0
+step_distance = 64.0
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
-rotation = -0.867429
 enabled = true
+cast_to = Vector2( 100, 0 )
