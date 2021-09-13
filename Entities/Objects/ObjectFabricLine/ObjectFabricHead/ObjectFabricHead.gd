@@ -39,11 +39,22 @@ func _ready():
 
 func _process(delta):
 	update_target_position(delta)
-	update_head_sprite_position()
 	update()
 
 
 func _draw():
+	# don't try to draw the head with less than two points in the line
+	if points.size() < 2:
+		return
+	
+	# draw beak
+	var last_point = points[points.size()-1]
+	var second_to_last_point = points[points.size() - 2]
+	var beak_endpoint = last_point + (last_point - second_to_last_point).normalized() * beak_length
+	draw_line(last_point, beak_endpoint, beak_color, beak_width)
+	draw_circle(beak_endpoint, beak_width / 2, beak_color)
+#	draw_colored_polygon(PoolVector2Array([last_point, second_to_last_point]), beak_color)
+	
 	# draw head
 	draw_circle(points[points.size()-1], head_radius, head_color)
 	
@@ -52,11 +63,6 @@ func _draw():
 	
 	# draw pupil
 	draw_circle(points[points.size()-1], pupil_radius, pupil_color)
-	
-	# draw beak
-	var last_point = points[points.size()-1]
-	var second_to_last_point = points[points.size() - 2]
-	draw_colored_polygon(PoolVector2Array([last_point, second_to_last_point]), beak_color)
 
 func _get_configuration_warning():
 	if 0:
@@ -77,12 +83,6 @@ func update_target_position(delta):
 	
 	target_position.x = lerp(target_position.x, lerp(mouse_target.x, normal_target.x, clamp(current_origin_position.distance_to(get_global_mouse_position()) / max_mouse_target_distance, 0, 1)), head_lerp_val.x)
 	target_position.y = lerp(target_position.y, lerp(mouse_target.y, normal_target.y, clamp(current_origin_position.distance_to(get_global_mouse_position()) / max_mouse_target_distance, 0, 1)), head_lerp_val.y)
-
-
-func update_head_sprite_position():
-	$HeadSprite.position = points[points.size()-1]
-	$HeadSprite.rotation_degrees = points[points.size()-2].angle_to_point((points[points.size()-1]))
-	print($HeadSprite.rotation_degrees)
 
 
 # set/get functions -----------------------------------------------------------

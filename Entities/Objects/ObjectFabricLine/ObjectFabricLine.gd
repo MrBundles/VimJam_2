@@ -15,12 +15,12 @@ class_name FabricLine
 #export(Color) var line_color
 
 # variables for generating the fabric line points
-export var point_count = 5
-export var point_spread = 20
+export var point_count = 5 setget set_point_count
+export var point_spread = 20 setget set_point_spread
 
 # segment length variables used in fabric calculations
 var segment_lengths = []
-var segment_length_sum = 0.0
+var segment_length_sum = 1.0
 
 # this is the point the fabric line is reaching for. All scripts inheriting this FabricLine class can animate this line by manipulating this value
 var target_position = Vector2.ZERO
@@ -44,9 +44,7 @@ func _ready():
 	# initialize segets
 	self.point_count = point_count
 	self.point_spread = point_spread
-	
-	init_points()
-	init_segment_lengths()
+#	init_points()
 	
 	# reset the max_origin_velocity to account for initial settline of the points, otherwise this value could be huge upon initial loading of the scene
 	yield(get_tree().create_timer(1.0), "timeout")
@@ -89,9 +87,16 @@ func _get_configuration_warning():
 
 # helper functions ------------------------------------------------------------
 func init_points():
-	points.empty()
+	# remove all current points
+	points = []
+	
 	for i in range(point_count):
 		add_point(Vector2(i * point_spread, 0), i)
+	
+	print(str(name) + str(points))
+	
+	# initialize segment lengths
+	init_segment_lengths()
 
 
 func init_segment_lengths():
@@ -99,7 +104,8 @@ func init_segment_lengths():
 	if points.size() < 1:
 		return
 	
-	segment_lengths.empty()
+	segment_lengths = []
+	segment_length_sum = 0.0
 	
 	var origin = points[0]
 	var previous_point = origin
@@ -109,10 +115,17 @@ func init_segment_lengths():
 			segment_lengths.append(segment_length)
 			segment_length_sum += segment_length
 			previous_point = point
+	
+	# clamp segment length sum to valid values
+	segment_length_sum = clamp(segment_length_sum, 0.1, 1000.0)
 
 
 func current_origin_velocity_update(delta):
-# calculate current velocity of the origin of the line
+	# don't try to perform these calculations without at least one point in the line
+	if points.size() < 1:
+		return
+	
+	# calculate current velocity of the origin of the line
 	current_origin_position = points[0] + get_parent().global_position
 	current_origin_velocity = (current_origin_position - previous_origin_position) / delta
 	previous_origin_position = current_origin_position
@@ -129,7 +142,7 @@ func fabric_update():
 	if points.size() < 1:
 		return
 	
-	var origin = points[0]	
+	var origin = points[0]
 	for iteration in range(max_iterations):
 		var starting_from_origin = iteration % 2 == 1
 		invert_points()
@@ -157,6 +170,14 @@ func invert_points():
 
 
 # set/get functions -----------------------------------------------------------
+func set_point_count(new_val):
+	point_count = new_val
+	init_points()
+
+
+func set_point_spread(new_val):
+	point_spread = new_val
+	init_points()
 
 
 # signal functions ------------------------------------------------------------

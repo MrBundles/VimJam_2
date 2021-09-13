@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=2 format=2]
 
 [ext_resource path="res://Entities/Objects/ObjectFabricLine/ObjectFabricHead/ObjectFabricHead.gd" type="Script" id=1]
-[ext_resource path="res://Entities/Characters/CharacterPlayer/CharacterPlayerSprites/Beak.png" type="Texture" id=2]
 
 [node name="ObjectFabricHead" type="Line2D"]
 default_color = Color( 1, 0.603922, 0.992157, 1 )
@@ -11,7 +10,3 @@ end_cap_mode = 2
 script = ExtResource( 1 )
 pupil_color = Color( 0, 0, 0, 1 )
 head_color = Color( 1, 0.603922, 0.992157, 1 )
-
-[node name="HeadSprite" type="Sprite" parent="."]
-visible = false
-texture = ExtResource( 2 )

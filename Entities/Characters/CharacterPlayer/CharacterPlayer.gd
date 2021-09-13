@@ -33,8 +33,10 @@ var colliding_with_body = false
 var socket_align_x = -1.0
 var plugged_in = false
 
-export(Texture) var happy_face
-export(Texture) var sad_face
+# draw variables
+export var body_position = Vector2.ZERO
+export var body_radius = 64.0
+export(Color) var body_color = Color(1,1,1,1)
 
 
 # main functions --------------------------------------
@@ -47,7 +49,13 @@ func _ready():
 
 func _physics_process(delta):
 	get_input()
+	update()
 	move_and_slide(velocity * delta * 1000, Vector2.UP, false, 4, PI/4, false)
+
+
+func _draw():
+	# draw body
+	draw_circle(body_position, body_radius, body_color)
 
 
 # helper functions --------------------------------------
