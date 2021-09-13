@@ -53,7 +53,7 @@ var current_menu_scene_id = MENU_SCENE_IDS.empty
 # recent director, this is used when saving files
 var recent_directory = ""
 
-
+export var debug_mode = false
 
 # main functions --------------------------------------------------------------
 func _ready():

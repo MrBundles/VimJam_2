@@ -44,6 +44,7 @@ signal set_editor_zoom					# new_editor_zoom
 signal editor_box_select
 
 signal change_lead_leg
+signal set_hiding						# new_hiding
 
 
 # variables -------------------------------------------------------------------

@@ -33,6 +33,8 @@ var colliding_with_body = false
 var socket_align_x = -1.0
 var plugged_in = false
 
+var hiding = false
+
 # draw variables
 export var body_position = Vector2.ZERO
 export var body_radius = 64.0
@@ -42,7 +44,7 @@ export(Color) var body_color = Color(1,1,1,1)
 # main functions --------------------------------------
 func _ready():
 	# connect signals
-	
+	GSM.connect("set_hiding", self, "_on_set_hiding")
 	
 	velocity_max_init = velocity_max
 
@@ -61,9 +63,9 @@ func _draw():
 # helper functions --------------------------------------
 func get_input():
 	#horizontal inputs
-	if Input.is_action_pressed("ui_left"):
+	if Input.is_action_pressed("ui_left") and not hiding:
 		velocity.x = clamp(velocity.x - h_accel, -velocity_max.x, velocity_max.x)
-	elif Input.is_action_pressed("ui_right"):
+	elif Input.is_action_pressed("ui_right") and not hiding:
 		velocity.x = clamp(velocity.x + h_accel, -velocity_max.x, velocity_max.x)
 	elif velocity.x <= -h_decel:
 		velocity.x = clamp(velocity.x + h_decel, -velocity_max.x, velocity_max.x)
@@ -87,7 +89,7 @@ func get_input():
 		velocity.y = 0
 	
 	#vertical input
-	if Input.is_action_pressed("ui_up") and not $CoyoteTimer.is_stopped():
+	if Input.is_action_pressed("ui_up") and not $CoyoteTimer.is_stopped() and not hiding:
 		velocity.y = clamp(velocity.y - jump, -velocity_max.y, velocity_max.y)
 		$CoyoteTimer.stop()
 	
@@ -95,7 +97,7 @@ func get_input():
 	velocity.y = clamp(velocity.y +gravity, -velocity_max.y, velocity_max.y)
 	
 	#apply float if falling and holding the jump button
-	if Input.is_action_pressed("ui_up") and velocity.y > 0:
+	if Input.is_action_pressed("ui_up") and velocity.y > 0 and not hiding:
 		velocity.y -= float_val
 
 
@@ -103,5 +105,6 @@ func get_input():
 
 
 # signal functions --------------------------------------
-
+func _on_set_hiding(new_hiding):
+	hiding = new_hiding
 
