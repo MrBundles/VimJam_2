@@ -8,4 +8,3 @@
 [node name="GlobalVariableManager" type="Node"]
 script = ExtResource( 1 )
 theme_array = [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ]
-debug_mode = true

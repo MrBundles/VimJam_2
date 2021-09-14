@@ -7,7 +7,7 @@
 
 [sub_resource type="RectangleShape2D" id=1]
 resource_local_to_scene = true
-extents = Vector2( 31, 31 )
+extents = Vector2( 31, 47 )
 
 [node name="CharacterPlayer" type="KinematicBody2D"]
 z_index = 2
@@ -24,7 +24,7 @@ foot_speed_mult = 0.075
 max_feet_lerp_val = 750.0
 leg_color = Color( 0.156863, 0.0901961, 0.0431373, 1 )
 max_lean_lerp_val = 1000.0
-body_position = Vector2( 0, -24 )
+body_position = Vector2( 0, -64 )
 body_radius = 32.0
 body_color = Color( 0.188235, 0.160784, 0.129412, 1 )
 
@@ -35,35 +35,35 @@ wait_time = 0.15
 one_shot = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 12 )
+position = Vector2( 0, -47 )
 shape = SubResource( 1 )
 __meta__ = {
 "_edit_ik_": true
 }
 
 [node name="RightFabricArm" parent="." instance=ExtResource( 2 )]
-position = Vector2( 0, -32 )
+position = Vector2( 0, -64 )
 z_index = 4
 direction = 3
 
 [node name="LeftFabricArm" parent="." instance=ExtResource( 2 )]
-position = Vector2( 0, -32 )
+position = Vector2( 0, -64 )
 z_index = -1
 point_count = 7
 
 [node name="RightFabricLeg" parent="." instance=ExtResource( 3 )]
-position = Vector2( 10, 0 )
+position = Vector2( 10, -48 )
 z_index = -1
 init_raycast_rotation_degrees = 45.0
 
 [node name="LeftFabricLeg" parent="." instance=ExtResource( 3 )]
-position = Vector2( -10, 0 )
+position = Vector2( -10, -48 )
 z_index = -1
 leg_is_lead = false
 init_raycast_rotation_degrees = 90.0
 
 [node name="FabricHead" parent="." instance=ExtResource( 5 )]
-position = Vector2( 0, -32 )
+position = Vector2( 0, -64 )
 z_index = -1
 point_count = 7
 max_mouse_target_distance = 500

@@ -55,6 +55,7 @@ var recent_directory = ""
 
 export var debug_mode = false
 
+
 # main functions --------------------------------------------------------------
 func _ready():
 	# connect signals

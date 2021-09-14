@@ -26,6 +26,7 @@ func _ready():
 	
 	$RayCast2D.add_exception(get_parent())
 	$RayCast2D.force_raycast_update()
+	$RayCast2D.cast_to = Vector2(-position.y / sin(45) * 1.25, 0)
 
 
 func _process(delta):
